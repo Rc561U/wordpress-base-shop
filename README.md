@@ -1,0 +1,2 @@
+### Trainee WORDPRESS-WOOCOMMERCE project
+
