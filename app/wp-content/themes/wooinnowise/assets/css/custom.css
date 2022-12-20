@@ -1,0 +1,13 @@
+.menu-1 {
+    list-style: none;
+    padding-left: 0;
+    padding-top: 20px;
+}
+
+.menu-1 li {
+    margin-right: 1rem;
+}
+
+.menu-1 li a {
+    color: #6C757D;
+}

@@ -1,0 +1,24 @@
+2022-12-20T08:08:01+00:00 CRITICAL Maximum execution time of 30 seconds exceeded in /var/www/html/wp-includes/Requests/Transport/cURL.php on line 462
+
+2022-12-20T10:18:59+00:00 CRITICAL Uncaught Error: Failed opening required '/var/www/html/wp-content/themes/wooinnowise/inc/woocommerce-hooks.php' (include_path='.:/usr/local/lib/php') in /var/www/html/wp-content/themes/wooinnowise/functions.php:10
+Stack trace:
+#0 /var/www/html/wp-settings.php(585): include()
+#1 /var/www/html/wp-config.php(98): require_once('/var/www/html/w...')
+#2 /var/www/html/wp-load.php(50): require_once('/var/www/html/w...')
+#3 /var/www/html/wp-blog-header.php(13): require_once('/var/www/html/w...')
+#4 /var/www/html/index.php(17): require('/var/www/html/w...')
+#5 {main}
+  thrown in /var/www/html/wp-content/themes/wooinnowise/functions.php on line 10
+
+2022-12-20T14:01:24+00:00 CRITICAL Uncaught Error: Class "Woostudy_Menu_Categories" not found in /var/www/html/wp-content/themes/wooinnowise/header.php:96
+Stack trace:
+#0 /var/www/html/wp-includes/template.php(783): require_once()
+#1 /var/www/html/wp-includes/template.php(718): load_template('/var/www/html/w...', true, Array)
+#2 /var/www/html/wp-includes/general-template.php(48): locate_template(Array, true, true, Array)
+#3 /var/www/html/wp-content/themes/wooinnowise/front-page.php(1): get_header()
+#4 /var/www/html/wp-includes/template-loader.php(106): include('/var/www/html/w...')
+#5 /var/www/html/wp-blog-header.php(19): require_once('/var/www/html/w...')
+#6 /var/www/html/index.php(17): require('/var/www/html/w...')
+#7 {main}
+  thrown in /var/www/html/wp-content/themes/wooinnowise/header.php on line 96
+
