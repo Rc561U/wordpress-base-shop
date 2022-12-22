@@ -1,0 +1,44 @@
+version: '3.1'
+services:
+    php:
+        build:
+            context: ./docker
+            dockerfile: php.Dockerfile
+        volumes:
+            - './app:/var/www/html'
+        depends_on:
+            - mariadb
+
+    nginx:
+        image: nginx:latest
+        ports:
+            - '80:80'
+            - '443:443'
+        links:
+            - 'php'
+        volumes:
+            - './app:/var/www/html'
+            - './config/nginx:/etc/nginx/conf.d'
+
+    mariadb:
+        image: mariadb:10.3.9
+        restart: 'on-failure'
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_USER: ${MYSQL_USER}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
+        volumes:
+            - './docker/volume/mysql:/var/lib/mysql'
+    pma:
+        image: phpmyadmin/phpmyadmin
+        environment:
+            PMA_HOST: ${MYSQL_HOST}
+            PMA_PORT: 3306
+            MYSQL_ROOT_PASSWORD: ${MYSQL_PASSWORD}
+        ports:
+            - "8080:80"
+        depends_on:
+            - mariadb
+        restart: always
