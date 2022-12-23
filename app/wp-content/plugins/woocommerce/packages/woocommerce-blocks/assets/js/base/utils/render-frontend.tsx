@@ -5,7 +5,7 @@ import { render, Suspense } from '@wordpress/element';
 import BlockErrorBoundary from '@woocommerce/base-components/block-error-boundary';
 
 // Some blocks take care of rendering their inner blocks automatically. For
-// example, the empty cart. In those cases, we don't want to trigger the render
+// example, the empty cart In those cases, we don't want to trigger the render
 // function of inner components on load. Instead, the wrapper block can trigger
 // the event `wc-blocks_render_blocks_frontend` to render its inner blocks.
 const selectorsToSkipOnLoad = [ '.wp-block-woocommerce-cart' ];

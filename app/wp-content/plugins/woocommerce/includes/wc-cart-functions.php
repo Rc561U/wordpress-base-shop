@@ -13,7 +13,7 @@ use Automattic\Jetpack\Constants;
 defined( 'ABSPATH' ) || exit;
 
 /**
- * Prevent password protected products being added to the cart.
+ * Prevent password protected products being added to the cart
  *
  * @param  bool $passed     Validation.
  * @param  int  $product_id Product ID.
@@ -39,7 +39,7 @@ function wc_empty_cart() {
 }
 
 /**
- * Load the persistent cart.
+ * Load the persistent cart
  *
  * @param string  $user_login User login.
  * @param WP_User $user       User data.
@@ -115,7 +115,7 @@ function wc_add_to_cart_message( $products, $show_qty = false, $return = false )
 
 	$titles = array_filter( $titles );
 	/* translators: %s: product name */
-	$added_text = sprintf( _n( '%s has been added to your cart.', '%s have been added to your cart.', $count, 'woocommerce' ), wc_format_list_of_items( $titles ) );
+	$added_text = sprintf( _n( '%s has been added to your cart', '%s have been added to your cart', $count, 'woocommerce' ), wc_format_list_of_items( $titles ) );
 
 	// Output success messages.
 	$wp_button_class = wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '';

@@ -39,7 +39,7 @@ class CartItemsByKey extends AbstractCartRoute {
 		return [
 			'args'        => [
 				'key' => [
-					'description' => __( 'Unique identifier for the item within the cart.', 'woocommerce' ),
+					'description' => __( 'Unique identifier for the item within the cart', 'woocommerce' ),
 					'type'        => 'string',
 				],
 			],

@@ -42,7 +42,7 @@ export const getCustomerData = (
  * Retrieves shipping rates from state.
  *
  * @param { CartState } state The current state.
- * @return { CartShippingRate[] } The shipping rates on the cart.
+ * @return { CartShippingRate[] } The shipping rates on the cart
  */
 export const getShippingRates = ( state: CartState ): CartShippingRate[] => {
 	return state.cartData.shippingRates;

@@ -301,7 +301,7 @@ class Checkout extends AbstractCartRoute {
 	}
 
 	/**
-	 * Create or update a draft order based on the cart.
+	 * Create or update a draft order based on the cart
 	 *
 	 * @param \WP_REST_Request $request Full details about the request.
 	 * @throws RouteException On error.

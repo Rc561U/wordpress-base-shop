@@ -23,11 +23,11 @@ interface StoreAddToCart {
 	addToCart: ( quantity?: number ) => Promise< boolean >;
 }
 /**
- * Get the quantity of a product in the cart.
+ * Get the quantity of a product in the cart
  *
  * @param {Object} cartItems Array of items.
  * @param {number} productId The product id to look for.
- * @return {number} Quantity in the cart.
+ * @return {number} Quantity in the cart
  */
 const getQuantityFromCartItems = (
 	cartItems: Array< CartItem >,
@@ -40,10 +40,10 @@ const getQuantityFromCartItems = (
 
 /**
  * A custom hook for exposing cart related data for a given product id and an
- * action for adding a single quantity of the product _to_ the cart.
+ * action for adding a single quantity of the product _to_ the cart
  *
  *
- * @param {number} productId The product id to be added to the cart.
+ * @param {number} productId The product id to be added to the cart
  *
  * @return {StoreCartItemAddToCart} An object exposing data and actions relating
  *                                  to add to cart functionality.

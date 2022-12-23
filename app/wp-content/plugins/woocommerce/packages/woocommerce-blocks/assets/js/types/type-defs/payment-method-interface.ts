@@ -40,7 +40,7 @@ export interface BillingDataProps {
 	// The address used for billing.
 	billingData: CartBillingAddress;
 	billingAddress: CartBillingAddress;
-	// The total item for the cart.
+	// The total item for the cart
 	cartTotal: PreparedCartTotalItem;
 	// The various subtotal amounts.
 	cartTotalItems: PreparedCartTotalItem[];

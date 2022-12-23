@@ -568,7 +568,7 @@ class WC_Product_Variable extends WC_Product {
 
 	/**
 	 * Returns whether or not the product has additional options that need
-	 * selecting before adding to cart.
+	 * selecting before adding to cart
 	 *
 	 * @since  3.0.0
 	 * @return boolean

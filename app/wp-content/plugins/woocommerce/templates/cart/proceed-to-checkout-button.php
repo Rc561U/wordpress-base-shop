@@ -2,7 +2,7 @@
 /**
  * Proceed to checkout button
  *
- * Contains the markup for the proceed to checkout button on the cart.
+ * Contains the markup for the proceed to checkout button on the cart
  *
  * This template can be overridden by copying it to yourtheme/woocommerce/cart/proceed-to-checkout-button.php.
  *

@@ -855,7 +855,7 @@ class WC_Coupon extends WC_Legacy_Coupon {
 	}
 
 	/**
-	 * Check if a coupon is valid for the cart.
+	 * Check if a coupon is valid for the cart
 	 *
 	 * @deprecated 3.2.0 In favor of WC_Discounts->is_coupon_valid.
 	 * @return bool

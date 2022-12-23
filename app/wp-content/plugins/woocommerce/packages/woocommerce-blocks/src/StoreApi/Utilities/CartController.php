@@ -47,7 +47,7 @@ class CartController {
 	 * Based on the core cart class but returns errors rather than rendering notices directly.
 	 *
 	 * @todo Overriding the core add_to_cart method was necessary because core outputs notices when an item is added to
-	 * the cart. For us this would cause notices to build up and output on the store, out of context. Core would need
+	 * the cart For us this would cause notices to build up and output on the store, out of context. Core would need
 	 * refactoring to split notices out from other cart actions.
 	 *
 	 * @throws RouteException Exception if invalid data is detected.
@@ -106,12 +106,12 @@ class CartController {
 		$request_quantity = $quantity_limits->limit_to_multiple( $request_quantity, $add_to_cart_limits['multiple_of'] );
 
 		/**
-		 * Filters the item being added to the cart.
+		 * Filters the item being added to the cart
 		 *
 		 * @internal Matches filter name in WooCommerce core.
 		 *
-		 * @param array $cart_item_data Array of cart item data being added to the cart.
-		 * @param string $cart_id Id of the item in the cart.
+		 * @param array $cart_item_data Array of cart item data being added to the cart
+		 * @param string $cart_id Id of the item in the cart
 		 * @return array Updated cart item data.
 		 */
 		$cart->cart_contents[ $cart_id ] = apply_filters(
@@ -142,17 +142,17 @@ class CartController {
 		$cart->cart_contents = apply_filters( 'woocommerce_cart_contents_changed', $cart->cart_contents );
 
 		/**
-		 * Fires when an item is added to the cart.
+		 * Fires when an item is added to the cart
 		 *
-		 * This hook fires when an item is added to the cart. This is triggered from the Store API in this context, but
+		 * This hook fires when an item is added to the cart This is triggered from the Store API in this context, but
 		 * WooCommerce core add to cart events trigger the same hook.
 		 *
 		 * @internal Matches action name in WooCommerce core.
 		 *
-		 * @param string $cart_id ID of the item in the cart.
-		 * @param integer $product_id ID of the product added to the cart.
-		 * @param integer $request_quantity Quantity of the item added to the cart.
-		 * @param integer $variation_id Variation ID of the product added to the cart.
+		 * @param string $cart_id ID of the item in the cart
+		 * @param integer $product_id ID of the product added to the cart
+		 * @param integer $request_quantity Quantity of the item added to the cart
+		 * @param integer $variation_id Variation ID of the product added to the cart
 		 * @param array $variation Array of variation data.
 		 * @param array $cart_item_data Array of other cart item data.
 		 */
@@ -247,15 +247,15 @@ class CartController {
 		/**
 		 * Filters if an item being added to the cart passed validation checks.
 		 *
-		 * Allow 3rd parties to validate if an item can be added to the cart. This is a legacy hook from Woo core.
+		 * Allow 3rd parties to validate if an item can be added to the cart This is a legacy hook from Woo core.
 		 * This filter will be deprecated because it encourages usage of wc_add_notice. For the API we need to capture
 		 * notices and convert to exceptions instead.
 		 *
 		 * @deprecated
 		 * @param boolean $passed_validation True if the item passed validation.
 		 * @param integer $product_id Product ID being validated.
-		 * @param integer $quantity Quantity added to the cart.
-		 * @param integer $variation_id Variation ID being added to the cart.
+		 * @param integer $quantity Quantity added to the cart
+		 * @param integer $variation_id Variation ID being added to the cart
 		 * @param array $variation Variation data.
 		 * @return boolean
 		 */
@@ -279,7 +279,7 @@ class CartController {
 		/**
 		 * Fires during validation when adding an item to the cart via the Store API.
 		 *
-		 * @param \WC_Product $product Product object being added to the cart.
+		 * @param \WC_Product $product Product object being added to the cart
 		 * @param array       $request Add to cart request params including id, quantity, and variation attributes.
 		 * @deprecated 7.1.0 Use woocommerce_store_api_validate_add_to_cart instead.
 		 */
@@ -297,10 +297,10 @@ class CartController {
 		/**
 		 * Fires during validation when adding an item to the cart via the Store API.
 		 *
-		 * Fire action to validate add to cart. Functions hooking into this should throw an \Exception to prevent
+		 * Fire action to validate add to cart Functions hooking into this should throw an \Exception to prevent
 		 * add to cart from happening.
 		 *
-		 * @param \WC_Product $product Product object being added to the cart.
+		 * @param \WC_Product $product Product object being added to the cart
 		 * @param array       $request Add to cart request params including id, quantity, and variation attributes.
 		 */
 		do_action( 'woocommerce_store_api_validate_add_to_cart', $product, $request );
@@ -337,48 +337,48 @@ class CartController {
 			'out_of_stock'         => [
 				/* translators: %s: product name. */
 				'singular' => __(
-					'%s is out of stock and cannot be purchased. Please remove it from your cart.',
+					'%s is out of stock and cannot be purchased. Please remove it from your cart',
 					'woocommerce'
 				),
 				/* translators: %s: product names. */
 				'plural'   => __(
-					'%s are out of stock and cannot be purchased. Please remove them from your cart.',
+					'%s are out of stock and cannot be purchased. Please remove them from your cart',
 					'woocommerce'
 				),
 			],
 			'not_purchasable'      => [
 				/* translators: %s: product name. */
 				'singular' => __(
-					'%s cannot be purchased. Please remove it from your cart.',
+					'%s cannot be purchased. Please remove it from your cart',
 					'woocommerce'
 				),
 				/* translators: %s: product names. */
 				'plural'   => __(
-					'%s cannot be purchased. Please remove them from your cart.',
+					'%s cannot be purchased. Please remove them from your cart',
 					'woocommerce'
 				),
 			],
 			'too_many_in_cart'     => [
 				/* translators: %s: product names. */
 				'singular' => __(
-					'There are too many %s in the cart. Only 1 can be purchased. Please reduce the quantity in your cart.',
+					'There are too many %s in the cart Only 1 can be purchased. Please reduce the quantity in your cart',
 					'woocommerce'
 				),
 				/* translators: %s: product names. */
 				'plural'   => __(
-					'There are too many %s in the cart. Only 1 of each can be purchased. Please reduce the quantities in your cart.',
+					'There are too many %s in the cart Only 1 of each can be purchased. Please reduce the quantities in your cart',
 					'woocommerce'
 				),
 			],
 			'partial_out_of_stock' => [
 				/* translators: %s: product names. */
 				'singular' => __(
-					'There is not enough %s in stock. Please reduce the quantity in your cart.',
+					'There is not enough %s in stock. Please reduce the quantity in your cart',
 					'woocommerce'
 				),
 				/* translators: %s: product names. */
 				'plural'   => __(
-					'There are not enough %s in stock. Please reduce the quantities in your cart.',
+					'There are not enough %s in stock. Please reduce the quantities in your cart',
 					'woocommerce'
 				),
 			],
@@ -391,13 +391,13 @@ class CartController {
 			return $stock_error_messages[ $exception_type ][ $singular_or_plural ];
 		}
 
-		return __( 'There was an error with an item in your cart.', 'woocommerce' );
+		return __( 'There was an error with an item in your cart', 'woocommerce' );
 	}
 
 	/**
 	 * Validate cart and check for errors.
 	 *
-	 * @throws InvalidCartException Exception if invalid data is detected in the cart.
+	 * @throws InvalidCartException Exception if invalid data is detected in the cart
 	 */
 	public function validate_cart() {
 		$this->validate_cart_items();
@@ -407,7 +407,7 @@ class CartController {
 		$cart_errors = new WP_Error();
 
 		/**
-		 * Fires an action to validate the cart.
+		 * Fires an action to validate the cart
 		 *
 		 * Functions hooking into this should add custom errors using the provided WP_Error instance.
 		 *
@@ -426,7 +426,7 @@ class CartController {
 			);
 		}
 
-		// Before running the woocommerce_check_cart_items hook, unhook validation from the core cart.
+		// Before running the woocommerce_check_cart_items hook, unhook validation from the core cart
 		remove_action( 'woocommerce_check_cart_items', array( $cart, 'check_cart_items' ), 1 );
 		remove_action( 'woocommerce_check_cart_items', array( $cart, 'check_cart_coupons' ), 1 );
 
@@ -570,7 +570,7 @@ class CartController {
 	 * Validates an existing cart item and returns any errors.
 	 *
 	 * @throws TooManyInCartException Exception if more than one product that can only be purchased individually is in
-	 * the cart.
+	 * the cart
 	 * @throws PartialOutOfStockException Exception if an item has a quantity greater than what is available in stock.
 	 * @throws OutOfStockException Exception thrown when an item is entirely out of stock.
 	 * @throws NotPurchasableException Exception thrown when an item is not purchasable.
@@ -617,10 +617,10 @@ class CartController {
 		}
 
 		/**
-		 * Fire action to validate add to cart. Functions hooking into this should throw an \Exception to prevent
+		 * Fire action to validate add to cart Functions hooking into this should throw an \Exception to prevent
 		 * add to cart from occurring.
 		 *
-		 * @param \WC_Product $product Product object being added to the cart.
+		 * @param \WC_Product $product Product object being added to the cart
 		 * @param array       $cart_item Cart item array.
 		 * @deprecated 7.1.0 Use woocommerce_store_api_validate_cart_item instead.
 		 */
@@ -636,10 +636,10 @@ class CartController {
 		);
 
 		/**
-		 * Fire action to validate add to cart. Functions hooking into this should throw an \Exception to prevent
+		 * Fire action to validate add to cart Functions hooking into this should throw an \Exception to prevent
 		 * add to cart from occurring.
 		 *
-		 * @param \WC_Product $product Product object being added to the cart.
+		 * @param \WC_Product $product Product object being added to the cart
 		 * @param array       $cart_item Cart item array.
 		 */
 		do_action( 'woocommerce_store_api_validate_cart_item', $product, $cart_item );
@@ -709,7 +709,7 @@ class CartController {
 		$cart = wc()->cart;
 
 		if ( ! $cart || ! $cart instanceof \WC_Cart ) {
-			throw new RouteException( 'woocommerce_rest_cart_error', __( 'Unable to retrieve cart.', 'woocommerce' ), 500 );
+			throw new RouteException( 'woocommerce_rest_cart_error', __( 'Unable to retrieve cart', 'woocommerce' ), 500 );
 		}
 
 		return $cart;
@@ -738,7 +738,7 @@ class CartController {
 	}
 
 	/**
-	 * Get hashes for items in the current cart. Useful for tracking changes.
+	 * Get hashes for items in the current cart Useful for tracking changes.
 	 *
 	 * @return array
 	 */
@@ -948,7 +948,7 @@ class CartController {
 			);
 		}
 
-		// Prevents new coupons being added if individual use coupons are already in the cart.
+		// Prevents new coupons being added if individual use coupons are already in the cart
 		$individual_use_coupons = $this->get_cart_coupons(
 			function( $code ) {
 				$coupon = new \WC_Coupon( $code );
@@ -965,9 +965,9 @@ class CartController {
 			 * @internal Matches filter name in WooCommerce core.
 			 *
 			 * @param boolean $apply_with_individual_use_coupon Defaults to false.
-			 * @param \WC_Coupon $coupon Coupon object applied to the cart.
-			 * @param \WC_Coupon $individual_use_coupon Individual use coupon already applied to the cart.
-			 * @param array $applied_coupons Array of applied coupons already applied to the cart.
+			 * @param \WC_Coupon $coupon Coupon object applied to the cart
+			 * @param \WC_Coupon $individual_use_coupon Individual use coupon already applied to the cart
+			 * @param array $applied_coupons Array of applied coupons already applied to the cart
 			 * @return boolean
 			 */
 			if ( false === apply_filters( 'woocommerce_apply_with_individual_use_coupon', false, $coupon, $individual_use_coupon, $applied_coupons ) ) {
@@ -989,9 +989,9 @@ class CartController {
 			 *
 			 * @internal Matches filter name in WooCommerce core.
 			 *
-			 * @param array $coupons Array of coupons to remove from the cart.
-			 * @param \WC_Coupon $coupon Coupon object applied to the cart.
-			 * @param array $applied_coupons Array of applied coupons already applied to the cart.
+			 * @param array $coupons Array of coupons to remove from the cart
+			 * @param \WC_Coupon $coupon Coupon object applied to the cart
+			 * @param array $applied_coupons Array of applied coupons already applied to the cart
 			 * @return array
 			 */
 			$coupons_to_remove = array_diff( $applied_coupons, apply_filters( 'woocommerce_apply_individual_use_coupon', array(), $coupon, $applied_coupons ) );
@@ -1007,7 +1007,7 @@ class CartController {
 		$cart->set_applied_coupons( $applied_coupons );
 
 		/**
-		 * Fires after a coupon has been applied to the cart.
+		 * Fires after a coupon has been applied to the cart
 		 *
 		 * @internal Matches action name in WooCommerce core.
 		 *
@@ -1021,7 +1021,7 @@ class CartController {
 	 *
 	 * @throws RouteException Exception if invalid data is detected.
 	 *
-	 * @param \WC_Coupon $coupon Coupon object applied to the cart.
+	 * @param \WC_Coupon $coupon Coupon object applied to the cart
 	 */
 	protected function validate_cart_coupon( \WC_Coupon $coupon ) {
 		if ( ! $coupon->is_valid() ) {
@@ -1069,7 +1069,7 @@ class CartController {
 	}
 
 	/**
-	 * Get a product object to be added to the cart.
+	 * Get a product object to be added to the cart
 	 *
 	 * @throws RouteException Exception if invalid data is detected.
 	 *
@@ -1082,7 +1082,7 @@ class CartController {
 		if ( ! $product || 'trash' === $product->get_status() ) {
 			throw new RouteException(
 				'woocommerce_rest_cart_invalid_product',
-				__( 'This product cannot be added to the cart.', 'woocommerce' ),
+				__( 'This product cannot be added to the cart', 'woocommerce' ),
 				400
 			);
 		}
@@ -1111,7 +1111,7 @@ class CartController {
 	}
 
 	/**
-	 * Default exception thrown when an item cannot be added to the cart.
+	 * Default exception thrown when an item cannot be added to the cart
 	 *
 	 * @throws RouteException Exception with code woocommerce_rest_product_not_purchasable.
 	 *
@@ -1151,9 +1151,9 @@ class CartController {
 		 * @internal Matches filter name in WooCommerce core.
 		 *
 		 * @param array $cart_item_data Array of other cart item data.
-		 * @param integer $product_id ID of the product added to the cart.
-		 * @param integer $variation_id Variation ID of the product added to the cart.
-		 * @param integer $quantity Quantity of the item added to the cart.
+		 * @param integer $product_id ID of the product added to the cart
+		 * @param integer $variation_id Variation ID of the product added to the cart
+		 * @param integer $quantity Quantity of the item added to the cart
 		 * @return array
 		 */
 		$request['cart_item_data'] = (array) apply_filters(
@@ -1171,9 +1171,9 @@ class CartController {
 			 * @internal Matches filter name in WooCommerce core.
 			 *
 			 * @param integer $sold_individually_quantity Defaults to 1.
-			 * @param integer $quantity Quantity of the item added to the cart.
-			 * @param integer $product_id ID of the product added to the cart.
-			 * @param integer $variation_id Variation ID of the product added to the cart.
+			 * @param integer $quantity Quantity of the item added to the cart
+			 * @param integer $product_id ID of the product added to the cart
+			 * @param integer $variation_id Variation ID of the product added to the cart
 			 * @param array $cart_item_data Array of other cart item data.
 			 * @return integer
 			 */
@@ -1184,7 +1184,7 @@ class CartController {
 	}
 
 	/**
-	 * If variations are set, validate and format the values ready to add to the cart.
+	 * If variations are set, validate and format the values ready to add to the cart
 	 *
 	 * @throws RouteException Exception if invalid data is detected.
 	 *
@@ -1266,7 +1266,7 @@ class CartController {
 	 * @throws RouteException Exception if variation cannot be found.
 	 *
 	 * @param array       $request Add to cart request params.
-	 * @param \WC_Product $product Product being added to the cart.
+	 * @param \WC_Product $product Product being added to the cart
 	 * @return int Matching variation ID.
 	 */
 	protected function get_variation_id_from_variation_data( $request, $product ) {
@@ -1343,7 +1343,7 @@ class CartController {
 	 *
 	 * @throws RouteException Exception if product is invalid.
 	 *
-	 * @param \WC_Product $product Product being added to the cart.
+	 * @param \WC_Product $product Product being added to the cart
 	 * @return array
 	 */
 	protected function get_variable_product_attributes( $product ) {
@@ -1354,7 +1354,7 @@ class CartController {
 		if ( ! $product || 'trash' === $product->get_status() ) {
 			throw new RouteException(
 				'woocommerce_rest_cart_invalid_parent_product',
-				__( 'This product cannot be added to the cart.', 'woocommerce' ),
+				__( 'This product cannot be added to the cart', 'woocommerce' ),
 				400
 			);
 		}

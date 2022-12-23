@@ -63,10 +63,35 @@ span.price del {
     margin-left: 10px;
 }
 
+/* search */
+.aws-container .aws-search-form {
+    height: 38px;
+}
 
+.aws-container .aws-search-form .aws-form-btn {
+    background: #fff;
+    border: 1px solid #ced4da;
+}
 
+.aws-container .aws-search-form .aws-form-btn:hover {
+    background: #ededed;
+}
 
+.aws-container .aws-search-form .aws-form-btn:hover > span {
+    color: #555;
+}
 
+.aws-container .aws-search-form .aws-search-btn_icon {
+    color: #FFD333;
+}
+
+.mini-cart-cnt  {
+    color: #FFD333 !important;
+}
+.border {
+    border: 1px solid #FFD333 !important;
+
+}
 
 /* Star rating */
 .woostudy-rating {
@@ -173,3 +198,49 @@ span.price del {
 }
 
 /* Star rating */
+
+nav.breadcrumb {
+    color: #6c757d;
+}
+nav.breadcrumb a {
+    color: #3D464D;
+}
+
+.woocommerce-products-header__title {
+    font-size: 1.25rem;
+}
+
+/*pagination*/
+
+
+.woocommerce-pagination ul.page-numbers {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.woocommerce-pagination li .page-numbers {
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    margin-left: -1px;
+    line-height: 1.25;
+    color: #FFD333;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+}
+
+.woocommerce-pagination span.page-numbers {
+    z-index: 3;
+    color: #fff;
+    background-color: #FFD333;
+    border-color: #FFD333;
+}
+
+.woocommerce-pagination a.page-numbers:hover {
+    z-index: 2;
+    color: #e6b400;
+    text-decoration: none;
+    background-color: #e9ecef;
+    border-color: #dee2e6;
+}

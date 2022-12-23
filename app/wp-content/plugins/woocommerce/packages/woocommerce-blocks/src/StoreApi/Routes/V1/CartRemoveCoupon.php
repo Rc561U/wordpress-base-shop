@@ -36,7 +36,7 @@ class CartRemoveCoupon extends AbstractCartRoute {
 				'permission_callback' => '__return_true',
 				'args'                => [
 					'code' => [
-						'description' => __( 'Unique identifier for the coupon within the cart.', 'woocommerce' ),
+						'description' => __( 'Unique identifier for the coupon within the cart', 'woocommerce' ),
 						'type'        => 'string',
 					],
 				],
@@ -67,7 +67,7 @@ class CartRemoveCoupon extends AbstractCartRoute {
 		}
 
 		if ( ! $this->cart_controller->has_coupon( $coupon_code ) ) {
-			throw new RouteException( 'woocommerce_rest_cart_coupon_invalid_code', __( 'Coupon cannot be removed because it is not already applied to the cart.', 'woocommerce' ), 409 );
+			throw new RouteException( 'woocommerce_rest_cart_coupon_invalid_code', __( 'Coupon cannot be removed because it is not already applied to the cart', 'woocommerce' ), 409 );
 		}
 
 		$cart = $this->cart_controller->get_cart_instance();

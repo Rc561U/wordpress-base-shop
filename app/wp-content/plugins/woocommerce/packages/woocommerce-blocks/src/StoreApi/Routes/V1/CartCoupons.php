@@ -110,7 +110,7 @@ class CartCoupons extends AbstractCartRoute {
 	}
 
 	/**
-	 * Deletes all coupons in the cart.
+	 * Deletes all coupons in the cart
 	 *
 	 * @throws RouteException On error.
 	 * @param \WP_REST_Request $request Request object.

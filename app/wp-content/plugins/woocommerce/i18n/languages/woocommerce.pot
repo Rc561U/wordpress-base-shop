@@ -13803,7 +13803,7 @@ msgid "Apply to all qualifying items in cart"
 msgstr ""
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:311
-msgid "The maximum number of individual items this coupon can apply to when using product discounts. Leave blank to apply to all qualifying items in cart."
+msgid "The maximum number of individual items this coupon can apply to when using product discounts. Leave blank to apply to all qualifying items in cart"
 msgstr ""
 
 #: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:327
@@ -19213,8 +19213,8 @@ msgstr ""
 
 #. translators: %d item count
 #: includes/class-wc-cart-session.php:449
-msgid "%d item from your previous order is currently unavailable and could not be added to your cart."
-msgid_plural "%d items from your previous order are currently unavailable and could not be added to your cart."
+msgid "%d item from your previous order is currently unavailable and could not be added to your cart"
+msgid_plural "%d items from your previous order are currently unavailable and could not be added to your cart"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -19227,7 +19227,7 @@ msgid "Get cart should not be called before the wp_loaded action."
 msgstr ""
 
 #: includes/class-wc-cart.php:745
-msgid "An item which is no longer available was removed from your cart."
+msgid "An item which is no longer available was removed from your cart"
 msgstr ""
 
 #. translators: %s: product name
@@ -19265,7 +19265,7 @@ msgstr ""
 
 #. translators: %s: product name
 #: includes/class-wc-cart.php:1153
-msgid "You cannot add another \"%s\" to your cart."
+msgid "You cannot add another \"%s\" to your cart"
 msgstr ""
 
 #: includes/class-wc-cart.php:1165
@@ -19299,7 +19299,7 @@ msgstr ""
 
 #. translators: 1: quantity in stock 2: current quantity
 #: includes/class-wc-cart.php:1232
-msgid "You cannot add that amount to the cart &mdash; we have %1$s in stock and you already have %2$s in your cart."
+msgid "You cannot add that amount to the cart &mdash; we have %1$s in stock and you already have %2$s in your cart"
 msgstr ""
 
 #: includes/class-wc-checkout.php:178
@@ -20022,7 +20022,7 @@ msgstr ""
 
 #. Translators: %s Product title.
 #: includes/class-wc-form-handler.php:684
-msgid "You can only have 1 %s in your cart."
+msgid "You can only have 1 %s in your cart"
 msgstr ""
 
 #: includes/class-wc-form-handler.php:706
@@ -20120,7 +20120,7 @@ msgid "Sorry, no products matched your selection. Please choose a different comb
 msgstr ""
 
 #: includes/class-wc-frontend-scripts.php:591
-msgid "Please select some product options before adding this product to your cart."
+msgid "Please select some product options before adding this product to your cart"
 msgstr ""
 
 #: includes/class-wc-frontend-scripts.php:592
@@ -24359,7 +24359,7 @@ msgstr ""
 
 #: includes/rest-api/Controllers/Version1/class-wc-rest-coupons-v1-controller.php:466
 #: includes/rest-api/Controllers/Version2/class-wc-rest-coupons-v2-controller.php:409
-msgid "If true, the coupon can only be used individually. Other applied coupons will be removed from the cart."
+msgid "If true, the coupon can only be used individually. Other applied coupons will be removed from the cart"
 msgstr ""
 
 #: includes/rest-api/Controllers/Version1/class-wc-rest-coupons-v1-controller.php:472
@@ -29084,8 +29084,8 @@ msgstr ""
 
 #. translators: %s: product name
 #: includes/wc-cart-functions.php:118
-msgid "%s has been added to your cart."
-msgid_plural "%s have been added to your cart."
+msgid "%s has been added to your cart"
+msgid_plural "%s have been added to your cart"
 msgstr[0] ""
 msgstr[1] ""
 
@@ -30184,7 +30184,7 @@ msgid "Invalid products in request body."
 msgstr ""
 
 #: includes/widgets/class-wc-widget-cart.php:23
-msgid "Display the customer shopping cart."
+msgid "Display the customer shopping cart"
 msgstr ""
 
 #: includes/widgets/class-wc-widget-cart.php:25
@@ -31186,7 +31186,7 @@ msgstr ""
 msgid "Locations outside all other zones"
 msgstr ""
 
-#. translators: %1$d is the number of products in the cart. %2$s is the cart total
+#. translators: %1$d is the number of products in the cart %2$s is the cart total
 #: packages/woocommerce-blocks/src/BlockTypes/MiniCart.php:368
 #: packages/woocommerce-blocks/build/mini-cart-component-frontend.js:5
 msgid "%1$d item in cart, total price of %2$s"
@@ -31217,7 +31217,7 @@ msgstr ""
 msgid "Go to category"
 msgstr ""
 
-#. translators: %s number of products in cart.
+#. translators: %s number of products in cart
 #. translators: %d is the count of products.
 #: packages/woocommerce-blocks/src/BlockTypes/ProductCategories.php:379
 #: assets/client/admin/chunks/homescreen.js:1
@@ -31334,7 +31334,7 @@ msgid "The cart item product or variation ID."
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Routes/V1/CartAddItem.php:45
-msgid "Quantity of this item to add to the cart."
+msgid "Quantity of this item to add to the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Routes/V1/CartAddItem.php:53
@@ -31360,7 +31360,7 @@ msgstr ""
 #: packages/woocommerce-blocks/src/StoreApi/Routes/V1/CartApplyCoupon.php:39
 #: packages/woocommerce-blocks/src/StoreApi/Routes/V1/CartCouponsByCode.php:42
 #: packages/woocommerce-blocks/src/StoreApi/Routes/V1/CartRemoveCoupon.php:39
-msgid "Unique identifier for the coupon within the cart."
+msgid "Unique identifier for the coupon within the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Routes/V1/CartApplyCoupon.php:58
@@ -31371,7 +31371,7 @@ msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Routes/V1/CartCouponsByCode.php:73
 #: packages/woocommerce-blocks/src/StoreApi/Routes/V1/CartCouponsByCode.php:88
-msgid "Coupon does not exist in the cart."
+msgid "Coupon does not exist in the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Routes/V1/CartExtensions.php:46
@@ -31385,7 +31385,7 @@ msgstr ""
 #: packages/woocommerce-blocks/src/StoreApi/Routes/V1/CartItemsByKey.php:42
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/CartItemSchema.php:35
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/CartShippingRateSchema.php:96
-msgid "Unique identifier for the item within the cart."
+msgid "Unique identifier for the item within the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Routes/V1/CartItemsByKey.php:81
@@ -31399,7 +31399,7 @@ msgid "Invalid coupon code."
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Routes/V1/CartRemoveCoupon.php:70
-msgid "Coupon cannot be removed because it is not already applied to the cart."
+msgid "Coupon cannot be removed because it is not already applied to the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Routes/V1/CartRemoveItem.php:42
@@ -31427,7 +31427,7 @@ msgid "Unique identifier (key) for the cart item to update."
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Routes/V1/CartUpdateItem.php:41
-msgid "New quantity of the item in the cart."
+msgid "New quantity of the item in the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Routes/V1/Checkout.php:80
@@ -31666,7 +31666,7 @@ msgid "Total tax removed due to discount applied by this coupon."
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/CartFeeSchema.php:30
-msgid "Unique identifier for the fee within the cart."
+msgid "Unique identifier for the fee within the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/CartFeeSchema.php:42
@@ -31682,7 +31682,7 @@ msgid "Total tax amount for this fee."
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/CartItemSchema.php:47
-msgid "Quantity of this item in the cart."
+msgid "Quantity of this item in the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/CartItemSchema.php:53
@@ -31819,7 +31819,7 @@ msgid "List of applied cart coupons."
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/CartSchema.php:119
-msgid "List of available shipping rates for the cart."
+msgid "List of available shipping rates for the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/CartSchema.php:129
@@ -31835,11 +31835,11 @@ msgid "List of cart items."
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/CartSchema.php:153
-msgid "Number of items in the cart."
+msgid "Number of items in the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/CartSchema.php:159
-msgid "Total weight (in grams) of all products in the cart."
+msgid "Total weight (in grams) of all products in the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/CartSchema.php:165
@@ -31867,11 +31867,11 @@ msgid "Cart total amounts provided using the smallest unit of the currency."
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/CartSchema.php:211
-msgid "Total price of items in the cart."
+msgid "Total price of items in the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/CartSchema.php:217
-msgid "Total tax on items in the cart."
+msgid "Total tax on items in the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/CartSchema.php:223
@@ -32019,7 +32019,7 @@ msgid "Meta data attached to the shipping rate."
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/CartShippingRateSchema.php:208
-msgid "True if this is the rate currently selected by the customer for the cart."
+msgid "True if this is the rate currently selected by the customer for the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/CheckoutSchema.php:62
@@ -32324,11 +32324,11 @@ msgid "Add to cart URL."
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/ProductSchema.php:418
-msgid "The minimum quantity that can be added to the cart."
+msgid "The minimum quantity that can be added to the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/ProductSchema.php:424
-msgid "The maximum quantity that can be added to the cart."
+msgid "The maximum quantity that can be added to the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Schemas/V1/TermSchema.php:42
@@ -32358,50 +32358,50 @@ msgstr ""
 
 #. translators: %s: product name.
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:339
-msgid "%s is out of stock and cannot be purchased. Please remove it from your cart."
+msgid "%s is out of stock and cannot be purchased. Please remove it from your cart"
 msgstr ""
 
 #. translators: %s: product names.
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:344
-msgid "%s are out of stock and cannot be purchased. Please remove them from your cart."
+msgid "%s are out of stock and cannot be purchased. Please remove them from your cart"
 msgstr ""
 
 #. translators: %s: product name.
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:351
-msgid "%s cannot be purchased. Please remove it from your cart."
+msgid "%s cannot be purchased. Please remove it from your cart"
 msgstr ""
 
 #. translators: %s: product names.
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:356
-msgid "%s cannot be purchased. Please remove them from your cart."
+msgid "%s cannot be purchased. Please remove them from your cart"
 msgstr ""
 
 #. translators: %s: product names.
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:363
-msgid "There are too many %s in the cart. Only 1 can be purchased. Please reduce the quantity in your cart."
+msgid "There are too many %s in the cart Only 1 can be purchased. Please reduce the quantity in your cart"
 msgstr ""
 
 #. translators: %s: product names.
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:368
-msgid "There are too many %s in the cart. Only 1 of each can be purchased. Please reduce the quantities in your cart."
+msgid "There are too many %s in the cart Only 1 of each can be purchased. Please reduce the quantities in your cart"
 msgstr ""
 
 #. translators: %s: product names.
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:375
-msgid "There is not enough %s in stock. Please reduce the quantity in your cart."
+msgid "There is not enough %s in stock. Please reduce the quantity in your cart"
 msgstr ""
 
 #. translators: %s: product names.
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:380
-msgid "There are not enough %s in stock. Please reduce the quantities in your cart."
+msgid "There are not enough %s in stock. Please reduce the quantities in your cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:394
-msgid "There was an error with an item in your cart."
+msgid "There was an error with an item in your cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:712
-msgid "Unable to retrieve cart."
+msgid "Unable to retrieve cart"
 msgstr ""
 
 #. translators: %d: shipping package number
@@ -32437,7 +32437,7 @@ msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:1085
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/CartController.php:1357
-msgid "This product cannot be added to the cart."
+msgid "This product cannot be added to the cart"
 msgstr ""
 
 #. translators: %s: product name
@@ -32460,7 +32460,7 @@ msgid "No matching variation found."
 msgstr ""
 
 #: packages/woocommerce-blocks/src/StoreApi/Utilities/OrderController.php:24
-msgid "Cannot create order from empty cart."
+msgid "Cannot create order from empty cart"
 msgstr ""
 
 #. translators: %s Coupon codes.
@@ -37357,7 +37357,7 @@ msgid "You may be interested in&hellip;"
 msgstr ""
 
 #: templates/cart/mini-cart.php:92
-msgid "No products in the cart."
+msgid "No products in the cart"
 msgstr ""
 
 #: templates/cart/proceed-to-checkout-button.php:26
@@ -37386,7 +37386,7 @@ msgid "Postcode / ZIP:"
 msgstr ""
 
 #: templates/checkout/cart-errors.php:21
-msgid "There are some issues with the items in your cart. Please go back to the cart page and resolve these issues before checking out."
+msgid "There are some issues with the items in your cart Please go back to the cart page and resolve these issues before checking out."
 msgstr ""
 
 #: templates/checkout/cart-errors.php:25
@@ -43789,7 +43789,7 @@ msgstr ""
 msgid "View Product"
 msgstr ""
 
-#. translators: %s number of products in cart.
+#. translators: %s number of products in cart
 #: packages/woocommerce-blocks/assets/js/atomic/blocks/product-elements/add-to-cart/shared/add-to-cart-button.js:158
 #: packages/woocommerce-blocks/assets/js/atomic/blocks/product-elements/button/block.js:121
 #: packages/woocommerce-blocks/build/all-products.js:18
@@ -44277,7 +44277,7 @@ msgstr ""
 
 #: packages/woocommerce-blocks/assets/js/blocks/cart/index.js:33
 #: packages/woocommerce-blocks/build/cart.js:52
-msgid "Shopping cart."
+msgid "Shopping cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/assets/js/blocks/checkout/checkout-order-error/index.js:51
@@ -46136,7 +46136,7 @@ msgstr ""
 #: packages/woocommerce-blocks/build/checkout-blocks/order-summary-discount-frontend.js:7
 #: packages/woocommerce-blocks/build/checkout-blocks/payment-frontend.js:3
 #: packages/woocommerce-blocks/build/checkout.js:7
-msgid "Coupon code \"%s\" has been applied to your cart."
+msgid "Coupon code \"%s\" has been applied to your cart"
 msgstr ""
 
 #. translators: %s coupon code.
@@ -46148,7 +46148,7 @@ msgstr ""
 #: packages/woocommerce-blocks/build/checkout-blocks/order-summary-discount-frontend.js:9
 #: packages/woocommerce-blocks/build/checkout-blocks/payment-frontend.js:5
 #: packages/woocommerce-blocks/build/checkout.js:9
-msgid "Coupon code \"%s\" has been removed from your cart."
+msgid "Coupon code \"%s\" has been removed from your cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/build/cart-blocks/cart-express-payment--checkout-blocks/express-payment-frontend.js:5
@@ -46158,11 +46158,11 @@ msgstr ""
 msgid "Taxes:"
 msgstr ""
 
-#. translators: %s refers to the item name in the cart.
+#. translators: %s refers to the item name in the cart
 #: packages/woocommerce-blocks/build/cart-blocks/cart-line-items--mini-cart-contents-block/products-table-frontend.js:7
 #: packages/woocommerce-blocks/build/cart.js:21
 #: packages/woocommerce-blocks/build/mini-cart-contents.js:3
-msgid "Quantity of %s in your cart."
+msgid "Quantity of %s in your cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/build/cart-blocks/cart-line-items--mini-cart-contents-block/products-table-frontend.js:7
@@ -46171,7 +46171,7 @@ msgstr ""
 msgid "Reduce quantity"
 msgstr ""
 
-#. translators: %s refers to the item name in the cart.
+#. translators: %s refers to the item name in the cart
 #: packages/woocommerce-blocks/build/cart-blocks/cart-line-items--mini-cart-contents-block/products-table-frontend.js:9
 #: packages/woocommerce-blocks/build/cart.js:23
 #: packages/woocommerce-blocks/build/mini-cart-contents.js:5
@@ -46184,7 +46184,7 @@ msgstr ""
 msgid "Increase quantity"
 msgstr ""
 
-#. translators: %s refers to the item name in the cart.
+#. translators: %s refers to the item name in the cart
 #: packages/woocommerce-blocks/build/cart-blocks/cart-line-items--mini-cart-contents-block/products-table-frontend.js:11
 #: packages/woocommerce-blocks/build/cart.js:25
 #: packages/woocommerce-blocks/build/mini-cart-contents.js:7
@@ -46198,11 +46198,11 @@ msgstr ""
 msgid "Save %s"
 msgstr ""
 
-#. translators: %s refers to the item name in the cart.
+#. translators: %s refers to the item name in the cart
 #: packages/woocommerce-blocks/build/cart-blocks/cart-line-items--mini-cart-contents-block/products-table-frontend.js:15
 #: packages/woocommerce-blocks/build/cart.js:29
 #: packages/woocommerce-blocks/build/mini-cart-contents.js:11
-msgid "%s has been removed from your cart."
+msgid "%s has been removed from your cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/build/cart-blocks/cart-line-items--mini-cart-contents-block/products-table-frontend.js:15
@@ -47090,7 +47090,7 @@ msgstr ""
 msgid "Your cart"
 msgstr ""
 
-#. translators: %d is the count of items in the cart.
+#. translators: %d is the count of items in the cart
 #: packages/woocommerce-blocks/build/mini-cart-contents-block/title-frontend.js:3
 #: packages/woocommerce-blocks/build/mini-cart-contents.js:15
 msgid "Your cart (%d item)"
@@ -47128,7 +47128,7 @@ msgid "Add-to-Cart behaviour"
 msgstr ""
 
 #: packages/woocommerce-blocks/build/mini-cart.js:1
-msgid "Select what happens when a customer adds a product to the cart."
+msgid "Select what happens when a customer adds a product to the cart"
 msgstr ""
 
 #: packages/woocommerce-blocks/build/mini-cart.js:1

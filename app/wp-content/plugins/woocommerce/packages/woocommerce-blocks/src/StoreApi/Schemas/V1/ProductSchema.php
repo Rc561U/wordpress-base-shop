@@ -415,13 +415,13 @@ class ProductSchema extends AbstractSchema {
 						'readonly'    => true,
 					],
 					'minimum'     => [
-						'description' => __( 'The minimum quantity that can be added to the cart.', 'woocommerce' ),
+						'description' => __( 'The minimum quantity that can be added to the cart', 'woocommerce' ),
 						'type'        => 'integer',
 						'context'     => [ 'view', 'edit' ],
 						'readonly'    => true,
 					],
 					'maximum'     => [
-						'description' => __( 'The maximum quantity that can be added to the cart.', 'woocommerce' ),
+						'description' => __( 'The maximum quantity that can be added to the cart', 'woocommerce' ),
 						'type'        => 'integer',
 						'context'     => [ 'view', 'edit' ],
 						'readonly'    => true,

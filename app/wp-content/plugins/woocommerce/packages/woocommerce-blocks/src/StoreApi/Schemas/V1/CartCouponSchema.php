@@ -85,7 +85,7 @@ class CartCouponSchema extends AbstractSchema {
 	/**
 	 * Generate a response from passed coupon code.
 	 *
-	 * @param string $coupon_code Coupon code from the cart.
+	 * @param string $coupon_code Coupon code from the cart
 	 * @return array
 	 */
 	public function get_item_response( $coupon_code ) {

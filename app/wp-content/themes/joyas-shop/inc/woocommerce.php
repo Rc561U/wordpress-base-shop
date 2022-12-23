@@ -232,7 +232,7 @@ if ( ! function_exists( 'joyas_shop_woocommerce_cart_link' ) ) {
 		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'joyas-shop' ); ?>">
 			<?php
 			$item_count_text = sprintf(
-				/* translators: number of items in the mini cart. */
+				/* translators: number of items in the mini cart */
 				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'joyas-shop' ),
 				WC()->cart->get_cart_contents_count()
 			);

@@ -59,7 +59,7 @@ const AddToCartButton = () => {
 	 * We can show a real button if we are:
 	 *
 	 *  	a) Showing a full add to cart form.
-	 * 		b) The product doesn't have options and can therefore be added directly to the cart.
+	 * 		b) The product doesn't have options and can therefore be added directly to the cart
 	 * 		c) The product is purchasable.
 	 *
 	 * Otherwise we show a link instead.
@@ -131,7 +131,7 @@ const LinkComponent = ( { className, href, text, onClick } ) => {
  *
  * @param {Object}         props                Incoming props for component
  * @param {string}         props.className      Incoming css class name.
- * @param {number}         props.quantityInCart Quantity of item in cart.
+ * @param {number}         props.quantityInCart Quantity of item in cart
  * @param {boolean}        props.isProcessing   Whether processing action is occurring.
  * @param {boolean}        props.isDisabled     Whether the button is disabled or not.
  * @param {boolean}        props.isDone         Whether processing is done.
@@ -154,7 +154,7 @@ const ButtonComponent = ( {
 		>
 			{ isDone && quantityInCart > 0
 				? sprintf(
-						/* translators: %s number of products in cart. */
+						/* translators: %s number of products in cart */
 						_n(
 							'%d in cart',
 							'%d in cart',

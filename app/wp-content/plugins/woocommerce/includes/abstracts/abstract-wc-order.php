@@ -1342,11 +1342,11 @@ abstract class WC_Abstract_Order extends WC_Abstract_Legacy_Order {
 			foreach ( $item_discounts as $item_id => $amount ) {
 				$item = $this->get_item( $item_id, false );
 
-				// If the prices include tax, discounts should be taken off the tax inclusive prices like in the cart.
+				// If the prices include tax, discounts should be taken off the tax inclusive prices like in the cart
 				if ( $this->get_prices_include_tax() && wc_tax_enabled() && 'taxable' === $item->get_tax_status() ) {
 					$taxes = WC_Tax::calc_tax( $amount, $this->get_tax_rates( $item->get_tax_class(), $tax_location ), true );
 
-					// Use unrounded taxes so totals will be re-calculated accurately, like in cart.
+					// Use unrounded taxes so totals will be re-calculated accurately, like in cart
 					$amount = $amount - array_sum( $taxes );
 				}
 

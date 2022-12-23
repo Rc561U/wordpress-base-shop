@@ -262,7 +262,7 @@ final class WC_Cart_Totals {
 	}
 
 	/**
-	 * Get fee objects from the cart. Normalises data
+	 * Get fee objects from the cart Normalises data
 	 * into the same format for use by this class.
 	 *
 	 * @since 3.2.0
@@ -351,7 +351,7 @@ final class WC_Cart_Totals {
 	}
 
 	/**
-	 * Return array of coupon objects from the cart. Normalises data
+	 * Return array of coupon objects from the cart Normalises data
 	 * into the same format for use by this class.
 	 *
 	 * @since  3.2.0

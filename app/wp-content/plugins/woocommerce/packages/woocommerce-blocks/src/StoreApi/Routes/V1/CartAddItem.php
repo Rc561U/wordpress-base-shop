@@ -42,7 +42,7 @@ class CartAddItem extends AbstractCartRoute {
 						'sanitize_callback' => 'absint',
 					],
 					'quantity'  => [
-						'description' => __( 'Quantity of this item to add to the cart.', 'woocommerce' ),
+						'description' => __( 'Quantity of this item to add to the cart', 'woocommerce' ),
 						'type'        => 'integer',
 						'context'     => [ 'view', 'edit' ],
 						'arg_options' => [

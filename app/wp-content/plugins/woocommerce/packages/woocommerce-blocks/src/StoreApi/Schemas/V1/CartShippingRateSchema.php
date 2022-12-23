@@ -93,7 +93,7 @@ class CartShippingRateSchema extends AbstractSchema {
 					'type'       => 'object',
 					'properties' => [
 						'key'      => [
-							'description' => __( 'Unique identifier for the item within the cart.', 'woocommerce' ),
+							'description' => __( 'Unique identifier for the item within the cart', 'woocommerce' ),
 							'type'        => 'string',
 							'context'     => [ 'view', 'edit' ],
 							'readonly'    => true,
@@ -205,7 +205,7 @@ class CartShippingRateSchema extends AbstractSchema {
 					],
 				],
 				'selected'      => [
-					'description' => __( 'True if this is the rate currently selected by the customer for the cart.', 'woocommerce' ),
+					'description' => __( 'True if this is the rate currently selected by the customer for the cart', 'woocommerce' ),
 					'type'        => 'boolean',
 					'context'     => [ 'view', 'edit' ],
 					'readonly'    => true,

@@ -375,7 +375,7 @@ class ProductCategories extends AbstractDynamicBlock {
 		}
 
 		$screen_reader_text = sprintf(
-			/* translators: %s number of products in cart. */
+			/* translators: %s number of products in cart */
 			_n( '%d product', '%d products', absint( $category->count ), 'woocommerce' ),
 			absint( $category->count )
 		);

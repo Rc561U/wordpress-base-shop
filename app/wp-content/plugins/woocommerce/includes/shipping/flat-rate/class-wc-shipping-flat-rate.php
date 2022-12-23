@@ -141,7 +141,7 @@ class WC_Shipping_Flat_Rate extends WC_Shipping_Method {
 	/**
 	 * Calculate the shipping costs.
 	 *
-	 * @param array $package Package of items from cart.
+	 * @param array $package Package of items from cart
 	 */
 	public function calculate_shipping( $package = array() ) {
 		$rate = array(
@@ -219,7 +219,7 @@ class WC_Shipping_Flat_Rate extends WC_Shipping_Method {
 	/**
 	 * Get items in package.
 	 *
-	 * @param  array $package Package of items from cart.
+	 * @param  array $package Package of items from cart
 	 * @return int
 	 */
 	public function get_package_item_qty( $package ) {
@@ -235,7 +235,7 @@ class WC_Shipping_Flat_Rate extends WC_Shipping_Method {
 	/**
 	 * Finds and returns shipping classes and the products with said class.
 	 *
-	 * @param mixed $package Package of items from cart.
+	 * @param mixed $package Package of items from cart
 	 * @return array
 	 */
 	public function find_shipping_classes( $package ) {

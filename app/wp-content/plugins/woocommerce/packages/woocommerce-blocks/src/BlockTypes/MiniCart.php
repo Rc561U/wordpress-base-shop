@@ -364,7 +364,7 @@ class MiniCart extends AbstractBlock {
 		$wrapper_styles = $classes_styles['styles'];
 
 		$aria_label = sprintf(
-		/* translators: %1$d is the number of products in the cart. %2$s is the cart total */
+		/* translators: %1$d is the number of products in the cart %2$s is the cart total */
 			_n(
 				'%1$d item in cart, total price of %2$s',
 				'%1$d items in cart, total price of %2$s',

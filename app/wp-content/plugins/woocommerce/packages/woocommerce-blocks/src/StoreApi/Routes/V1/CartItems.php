@@ -109,7 +109,7 @@ class CartItems extends AbstractCartRoute {
 	}
 
 	/**
-	 * Deletes all items in the cart.
+	 * Deletes all items in the cart
 	 *
 	 * @throws RouteException On error.
 	 * @param \WP_REST_Request $request Request object.

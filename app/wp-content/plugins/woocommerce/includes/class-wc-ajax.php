@@ -410,7 +410,7 @@ class WC_AJAX {
 	}
 
 	/**
-	 * AJAX add to cart.
+	 * AJAX add to cart
 	 */
 	public static function add_to_cart() {
 		ob_start();
@@ -458,7 +458,7 @@ class WC_AJAX {
 	}
 
 	/**
-	 * AJAX remove from cart.
+	 * AJAX remove from cart
 	 */
 	public static function remove_from_cart() {
 		ob_start();

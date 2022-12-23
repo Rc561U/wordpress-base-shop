@@ -32,7 +32,7 @@ class CartItemSchema extends ProductSchema {
 	public function get_properties() {
 		return [
 			'key'                  => [
-				'description' => __( 'Unique identifier for the item within the cart.', 'woocommerce' ),
+				'description' => __( 'Unique identifier for the item within the cart', 'woocommerce' ),
 				'type'        => 'string',
 				'context'     => [ 'view', 'edit' ],
 				'readonly'    => true,
@@ -44,7 +44,7 @@ class CartItemSchema extends ProductSchema {
 				'readonly'    => true,
 			],
 			'quantity'             => [
-				'description' => __( 'Quantity of this item in the cart.', 'woocommerce' ),
+				'description' => __( 'Quantity of this item in the cart', 'woocommerce' ),
 				'type'        => 'number',
 				'context'     => [ 'view', 'edit' ],
 				'readonly'    => true,
@@ -392,7 +392,7 @@ class CartItemSchema extends ProductSchema {
 	/**
 	 * Format variation data, for example convert slugs such as attribute_pa_size to Size.
 	 *
-	 * @param array       $variation_data Array of data from the cart.
+	 * @param array       $variation_data Array of data from the cart
 	 * @param \WC_Product $product Product data.
 	 * @return array
 	 */

@@ -3739,7 +3739,7 @@ function wc_get_formatted_cart_item_data( $cart_item, $flat = false ) {
 
 	// Format item data ready to display.
 	foreach ( $item_data as $key => $data ) {
-		// Set hidden to true to not display meta on cart.
+		// Set hidden to true to not display meta on cart
 		if ( ! empty( $data['hidden'] ) ) {
 			unset( $item_data[ $key ] );
 			continue;
@@ -3767,7 +3767,7 @@ function wc_get_formatted_cart_item_data( $cart_item, $flat = false ) {
 }
 
 /**
- * Gets the url to remove an item from the cart.
+ * Gets the url to remove an item from the cart
  *
  * @since 3.3.0
  * @param string $cart_item_key contains the id of the cart item.
@@ -3779,7 +3779,7 @@ function wc_get_cart_remove_url( $cart_item_key ) {
 }
 
 /**
- * Gets the url to re-add an item into the cart.
+ * Gets the url to re-add an item into the cart
  *
  * @since 3.3.0
  * @param  string $cart_item_key Cart item key to undo.

@@ -110,7 +110,7 @@ addAction( `${ actionPrefix }-checkout-submit`, namespace, (): void => {
 } );
 
 /**
- * Add to cart.
+ * Add to cart
  *
  * This event signifies that an item was added to a cart for purchase.
  *

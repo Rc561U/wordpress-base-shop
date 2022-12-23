@@ -20,7 +20,7 @@ class WC_Widget_Cart extends WC_Widget {
 	 */
 	public function __construct() {
 		$this->widget_cssclass    = 'woocommerce widget_shopping_cart';
-		$this->widget_description = __( 'Display the customer shopping cart.', 'woocommerce' );
+		$this->widget_description = __( 'Display the customer shopping cart', 'woocommerce' );
 		$this->widget_id          = 'woocommerce_widget_cart';
 		$this->widget_name        = __( 'Cart', 'woocommerce' );
 		$this->settings           = array(

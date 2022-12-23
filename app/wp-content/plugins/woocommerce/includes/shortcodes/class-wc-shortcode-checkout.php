@@ -273,7 +273,7 @@ class WC_Shortcode_Checkout {
 			$order->save();
 		}
 
-		// Empty current cart.
+		// Empty current cart
 		wc_empty_cart();
 
 		wc_get_template( 'checkout/thankyou.php', array( 'order' => $order ) );

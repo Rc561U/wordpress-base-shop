@@ -116,7 +116,7 @@ class CartSchema extends AbstractSchema {
 				],
 			],
 			'shipping_rates'          => [
-				'description' => __( 'List of available shipping rates for the cart.', 'woocommerce' ),
+				'description' => __( 'List of available shipping rates for the cart', 'woocommerce' ),
 				'type'        => 'array',
 				'context'     => [ 'view', 'edit' ],
 				'readonly'    => true,
@@ -150,13 +150,13 @@ class CartSchema extends AbstractSchema {
 				],
 			],
 			'items_count'             => [
-				'description' => __( 'Number of items in the cart.', 'woocommerce' ),
+				'description' => __( 'Number of items in the cart', 'woocommerce' ),
 				'type'        => 'integer',
 				'context'     => [ 'view', 'edit' ],
 				'readonly'    => true,
 			],
 			'items_weight'            => [
-				'description' => __( 'Total weight (in grams) of all products in the cart.', 'woocommerce' ),
+				'description' => __( 'Total weight (in grams) of all products in the cart', 'woocommerce' ),
 				'type'        => 'number',
 				'context'     => [ 'view', 'edit' ],
 				'readonly'    => true,
@@ -208,13 +208,13 @@ class CartSchema extends AbstractSchema {
 					$this->get_store_currency_properties(),
 					[
 						'total_items'        => [
-							'description' => __( 'Total price of items in the cart.', 'woocommerce' ),
+							'description' => __( 'Total price of items in the cart', 'woocommerce' ),
 							'type'        => 'string',
 							'context'     => [ 'view', 'edit' ],
 							'readonly'    => true,
 						],
 						'total_items_tax'    => [
-							'description' => __( 'Total tax on items in the cart.', 'woocommerce' ),
+							'description' => __( 'Total tax on items in the cart', 'woocommerce' ),
 							'type'        => 'string',
 							'context'     => [ 'view', 'edit' ],
 							'readonly'    => true,
@@ -336,7 +336,7 @@ class CartSchema extends AbstractSchema {
 		// calculated so we can avoid returning costs and rates prematurely.
 		$has_calculated_shipping = $cart->show_shipping();
 
-		// Get shipping packages to return in the response from the cart.
+		// Get shipping packages to return in the response from the cart
 		$shipping_packages = $has_calculated_shipping ? $controller->get_shipping_packages() : [];
 
 		// Get visible cross sells products.

@@ -19,7 +19,7 @@ import { useStoreCart } from './use-store-cart';
 
 /**
  * This is a custom hook for loading the Store API /cart/coupons endpoint and an
- * action for adding a coupon _to_ the cart.
+ * action for adding a coupon _to_ the cart
  * See also: https://github.com/woocommerce/woocommerce-gutenberg-products-block/tree/trunk/src/RestApi/StoreApi
  *
  * @return {StoreCartCoupon} An object exposing data and actions from/for the
@@ -68,7 +68,7 @@ export const useStoreCartCoupons = ( context = '' ): StoreCartCoupon => {
 						sprintf(
 							/* translators: %s coupon code. */
 							__(
-								'Coupon code "%s" has been applied to your cart.',
+								'Coupon code "%s" has been applied to your cart',
 								'woo-gutenberg-products-block'
 							),
 							couponCode
@@ -102,7 +102,7 @@ export const useStoreCartCoupons = ( context = '' ): StoreCartCoupon => {
 						sprintf(
 							/* translators: %s coupon code. */
 							__(
-								'Coupon code "%s" has been removed from your cart.',
+								'Coupon code "%s" has been removed from your cart',
 								'woo-gutenberg-products-block'
 							),
 							couponCode

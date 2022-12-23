@@ -128,7 +128,7 @@ class WC_Shipping_Free_Shipping extends WC_Shipping_Method {
 	}
 
 	/**
-	 * See if free shipping is available based on the package and cart.
+	 * See if free shipping is available based on the package and cart
 	 *
 	 * @param array $package Shipping package.
 	 * @return bool

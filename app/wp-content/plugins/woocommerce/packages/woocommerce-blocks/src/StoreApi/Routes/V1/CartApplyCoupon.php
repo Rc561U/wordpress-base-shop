@@ -36,7 +36,7 @@ class CartApplyCoupon extends AbstractCartRoute {
 				'permission_callback' => '__return_true',
 				'args'                => [
 					'code' => [
-						'description' => __( 'Unique identifier for the coupon within the cart.', 'woocommerce' ),
+						'description' => __( 'Unique identifier for the coupon within the cart', 'woocommerce' ),
 						'type'        => 'string',
 					],
 				],

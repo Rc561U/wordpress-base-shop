@@ -131,7 +131,7 @@ final class QuantityLimits {
 	}
 
 	/**
-	 * Get the limit for the total number of a product allowed in the cart.
+	 * Get the limit for the total number of a product allowed in the cart
 	 *
 	 * This is based on product properties, including remaining stock, and defaults to a maximum of 9999 of any product
 	 * in the cart at once.
@@ -193,7 +193,7 @@ final class QuantityLimits {
 		$cart_item  = $is_product ? null : $cart_item_or_product;
 		/**
 		 * Filters the quantity minimum for a cart item in Store API. This allows extensions to control the minimum qty
-		 * of items already within the cart.
+		 * of items already within the cart
 		 *
 		 * The suffix of the hook will vary depending on the value being filtered.
 		 * For example, minimum, maximum, multiple_of, editable.

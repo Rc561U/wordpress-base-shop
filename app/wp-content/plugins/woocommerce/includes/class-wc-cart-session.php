@@ -94,7 +94,7 @@ final class WC_Cart_Session {
 		$cart                = WC()->session->get( 'cart', null );
 		$merge_saved_cart    = (bool) get_user_meta( get_current_user_id(), '_woocommerce_load_saved_cart_after_login', true );
 
-		// Merge saved cart with current cart.
+		// Merge saved cart with current cart
 		if ( is_null( $cart ) || $merge_saved_cart ) {
 			$saved_cart          = $this->get_saved_cart();
 			$cart                = is_null( $cart ) ? array() : $cart;
@@ -133,10 +133,10 @@ final class WC_Cart_Session {
 			 *
 			 * @since 3.6.0
 			 *
-			 * @param bool       $remove_cart_item_from_session If true, the item will not be added to the cart. Default: false.
+			 * @param bool       $remove_cart_item_from_session If true, the item will not be added to the cart Default: false.
 			 * @param string     $key Cart item key.
 			 * @param array      $values Cart item values e.g. quantity and product_id.
-			 * @param WC_Product $product The product being added to the cart.
+			 * @param WC_Product $product The product being added to the cart
 			 */
 			if ( apply_filters( 'woocommerce_pre_remove_cart_item_from_session', false, $key, $values, $product ) ) {
 				$update_cart_session = true;
@@ -147,17 +147,17 @@ final class WC_Cart_Session {
 				 *
 				 * @param string     $key Cart item key.
 				 * @param array      $values Cart item values e.g. quantity and product_id.
-				 * @param WC_Product $product The product being added to the cart.
+				 * @param WC_Product $product The product being added to the cart
 				 */
 				do_action( 'woocommerce_remove_cart_item_from_session', $key, $values, $product );
 
 			/**
 			 * Allow 3rd parties to override this item's is_purchasable() result with cart item data.
 			 *
-			 * @param bool       $is_purchasable If false, the item will not be added to the cart. Default: product's is_purchasable() status.
+			 * @param bool       $is_purchasable If false, the item will not be added to the cart Default: product's is_purchasable() status.
 			 * @param string     $key Cart item key.
 			 * @param array      $values Cart item values e.g. quantity and product_id.
-			 * @param WC_Product $product The product being added to the cart.
+			 * @param WC_Product $product The product being added to the cart
 			 *
 			 * @since 7.0.0
 			 */
@@ -166,7 +166,7 @@ final class WC_Cart_Session {
 				/* translators: %s: product name */
 				$message = sprintf( __( '%s has been removed from your cart because it can no longer be purchased. Please contact us if you need assistance.', 'woocommerce' ), $product->get_name() );
 				/**
-				 * Filter message about item removed from the cart.
+				 * Filter message about item removed from the cart
 				 *
 				 * @since 3.8.0
 				 * @param string     $message Message.
@@ -447,8 +447,8 @@ final class WC_Cart_Session {
 				sprintf(
 					/* translators: %d item count */
 					_n(
-						'%d item from your previous order is currently unavailable and could not be added to your cart.',
-						'%d items from your previous order are currently unavailable and could not be added to your cart.',
+						'%d item from your previous order is currently unavailable and could not be added to your cart',
+						'%d items from your previous order are currently unavailable and could not be added to your cart',
 						$num_items_in_original_order - $num_items_added,
 						'woocommerce'
 					),

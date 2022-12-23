@@ -6,7 +6,7 @@ use Automattic\WooCommerce\StoreApi\Exceptions\RouteException;
 
 /**
  * OrderController class.
- * Helper class which creates and syncs orders with the cart.
+ * Helper class which creates and syncs orders with the cart
  */
 class OrderController {
 
@@ -21,7 +21,7 @@ class OrderController {
 		if ( wc()->cart->is_empty() ) {
 			throw new RouteException(
 				'woocommerce_rest_cart_empty',
-				__( 'Cannot create order from empty cart.', 'woocommerce' ),
+				__( 'Cannot create order from empty cart', 'woocommerce' ),
 				400
 			);
 		}
@@ -39,7 +39,7 @@ class OrderController {
 	}
 
 	/**
-	 * Update an order using data from the current cart.
+	 * Update an order using data from the current cart
 	 *
 	 * @param \WC_Order $order The order object to update.
 	 */
@@ -51,7 +51,7 @@ class OrderController {
 		wc()->cart->calculate_shipping();
 		wc()->cart->calculate_totals();
 
-		// Update the current order to match the current cart.
+		// Update the current order to match the current cart
 		$this->update_line_items_from_cart( $order );
 		$this->update_addresses_from_cart( $order );
 		$order->set_currency( get_woocommerce_currency() );
@@ -164,7 +164,7 @@ class OrderController {
 			// Recalculate totals.
 			wc()->cart->calculate_totals();
 
-			// Re-sync order with cart.
+			// Re-sync order with cart
 			$this->update_order_from_cart( $order );
 
 			// Return exception so customer can review before payment.
@@ -373,7 +373,7 @@ class OrderController {
 	 * Check email restrictions of a coupon against the order.
 	 *
 	 * @throws Exception Exception if invalid data is detected.
-	 * @param \WC_Coupon $coupon Coupon object applied to the cart.
+	 * @param \WC_Coupon $coupon Coupon object applied to the cart
 	 * @param \WC_Order  $order Order object.
 	 */
 	protected function validate_coupon_email_restriction( \WC_Coupon $coupon, \WC_Order $order ) {
@@ -388,7 +388,7 @@ class OrderController {
 	 * Check usage restrictions of a coupon against the order.
 	 *
 	 * @throws Exception Exception if invalid data is detected.
-	 * @param \WC_Coupon $coupon Coupon object applied to the cart.
+	 * @param \WC_Coupon $coupon Coupon object applied to the cart
 	 * @param \WC_Order  $order Order object.
 	 */
 	protected function validate_coupon_usage_limit( \WC_Coupon $coupon, \WC_Order $order ) {

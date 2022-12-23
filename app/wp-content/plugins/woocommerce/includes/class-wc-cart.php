@@ -37,7 +37,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	public $removed_cart_contents = array();
 
 	/**
-	 * Contains an array of coupon codes applied to the cart.
+	 * Contains an array of coupon codes applied to the cart
 	 *
 	 * @var array
 	 */
@@ -141,7 +141,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	}
 
 	/**
-	 * Return items removed from the cart.
+	 * Return items removed from the cart
 	 *
 	 * @since 3.2.0
 	 * @return array
@@ -367,7 +367,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	*/
 
 	/**
-	 * Sets the contents of the cart.
+	 * Sets the contents of the cart
 	 *
 	 * @param array $value Cart array.
 	 */
@@ -376,7 +376,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	}
 
 	/**
-	 * Set items removed from the cart.
+	 * Set items removed from the cart
 	 *
 	 * @since 3.2.0
 	 * @param array $value Item array.
@@ -605,7 +605,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	}
 
 	/**
-	 * Returns a specific item in the cart.
+	 * Returns a specific item in the cart
 	 *
 	 * @param string $item_key Cart item key.
 	 * @return array Item data
@@ -650,7 +650,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	}
 
 	/**
-	 * Get number of items in the cart.
+	 * Get number of items in the cart
 	 *
 	 * @return int
 	 */
@@ -659,7 +659,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	}
 
 	/**
-	 * Get weight of items in the cart.
+	 * Get weight of items in the cart
 	 *
 	 * @since 2.5.0
 	 * @return float
@@ -742,7 +742,7 @@ class WC_Cart extends WC_Legacy_Cart {
 
 			if ( ! $product || ! $product->exists() || 'trash' === $product->get_status() ) {
 				$this->set_quantity( $cart_item_key, 0 );
-				$return = new WP_Error( 'invalid', __( 'An item which is no longer available was removed from your cart.', 'woocommerce' ) );
+				$return = new WP_Error( 'invalid', __( 'An item which is no longer available was removed from your cart', 'woocommerce' ) );
 			}
 		}
 
@@ -779,7 +779,7 @@ class WC_Cart extends WC_Legacy_Cart {
 			$required_stock = $product_qty_in_cart[ $product->get_stock_managed_by_id() ];
 
 			/**
-			 * Allows filter if product have enough stock to get added to the cart.
+			 * Allows filter if product have enough stock to get added to the cart
 			 *
 			 * @since 4.6.0
 			 * @param bool       $has_stock If have enough stock.
@@ -810,7 +810,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	}
 
 	/**
-	 * Gets cross sells based on the items in the cart.
+	 * Gets cross sells based on the items in the cart
 	 *
 	 * @return array cross_sells (item ids)
 	 */
@@ -830,7 +830,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	}
 
 	/**
-	 * Gets the url to remove an item from the cart.
+	 * Gets the url to remove an item from the cart
 	 *
 	 * @param string $cart_item_key contains the id of the cart item.
 	 * @return string url to page
@@ -842,7 +842,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	}
 
 	/**
-	 * Gets the url to re-add an item into the cart.
+	 * Gets the url to re-add an item into the cart
 	 *
 	 * @param  string $cart_item_key Cart item key to undo.
 	 * @return string url to page
@@ -896,7 +896,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	}
 
 	/**
-	 * Get all tax classes for items in the cart.
+	 * Get all tax classes for items in the cart
 	 *
 	 * @return array
 	 */
@@ -913,7 +913,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	}
 
 	/**
-	 * Get all tax classes for shipping based on the items in the cart.
+	 * Get all tax classes for shipping based on the items in the cart
 	 *
 	 * @return array
 	 */
@@ -952,7 +952,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	 *
 	 * Cart item key will be unique based on the item and its properties, such as variations.
 	 *
-	 * @param mixed $cart_id id of product to find in the cart.
+	 * @param mixed $cart_id id of product to find in the cart
 	 * @return string cart item key
 	 */
 	public function find_product_in_cart( $cart_id = false ) {
@@ -970,7 +970,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	 * @param int   $product_id - id of the product the key is being generated for.
 	 * @param int   $variation_id of the product the key is being generated for.
 	 * @param array $variation data for the cart item.
-	 * @param array $cart_item_data other cart item data passed which affects this items uniqueness in the cart.
+	 * @param array $cart_item_data other cart item data passed which affects this items uniqueness in the cart
 	 * @return string cart item key
 	 */
 	public function generate_cart_id( $product_id, $variation_id = 0, $variation = array(), $cart_item_data = array() ) {
@@ -1004,12 +1004,12 @@ class WC_Cart extends WC_Legacy_Cart {
 	}
 
 	/**
-	 * Add a product to the cart.
+	 * Add a product to the cart
 	 *
-	 * @throws Exception Plugins can throw an exception to prevent adding to cart.
-	 * @param int   $product_id contains the id of the product to add to the cart.
+	 * @throws Exception Plugins can throw an exception to prevent adding to cart
+	 * @param int   $product_id contains the id of the product to add to the cart
 	 * @param int   $quantity contains the quantity of the item to add.
-	 * @param int   $variation_id ID of the variation being added to the cart.
+	 * @param int   $variation_id ID of the variation being added to the cart
 	 * @param array $variation attribute values.
 	 * @param array $cart_item_data extra cart item data we want to pass into the item.
 	 * @return string|bool $cart_item_key
@@ -1037,7 +1037,7 @@ class WC_Cart extends WC_Legacy_Cart {
 				$parent_data        = wc_get_product( $product_data->get_parent_id() );
 
 				$variation_attributes = $product_data->get_variation_attributes();
-				// Filter out 'any' variations, which are empty, as they need to be explicitly specified while adding to cart.
+				// Filter out 'any' variations, which are empty, as they need to be explicitly specified while adding to cart
 				$variation_attributes = array_filter( $variation_attributes );
 
 				// Gather posted attributes.
@@ -1140,20 +1140,20 @@ class WC_Cart extends WC_Legacy_Cart {
 			// Generate a ID based on product ID, variation ID, variation data, and other cart item data.
 			$cart_id = $this->generate_cart_id( $product_id, $variation_id, $variation, $cart_item_data );
 
-			// Find the cart item key in the existing cart.
+			// Find the cart item key in the existing cart
 			$cart_item_key = $this->find_product_in_cart( $cart_id );
 
-			// Force quantity to 1 if sold individually and check for existing item in cart.
+			// Force quantity to 1 if sold individually and check for existing item in cart
 			if ( $product_data->is_sold_individually() ) {
 				$quantity      = apply_filters( 'woocommerce_add_to_cart_sold_individually_quantity', 1, $quantity, $product_id, $variation_id, $cart_item_data );
 				$found_in_cart = apply_filters( 'woocommerce_add_to_cart_sold_individually_found_in_cart', $cart_item_key && $this->cart_contents[ $cart_item_key ]['quantity'] > 0, $product_id, $variation_id, $cart_item_data, $cart_id );
 
 				if ( $found_in_cart ) {
 					/* translators: %s: product name */
-					$message = sprintf( __( 'You cannot add another "%s" to your cart.', 'woocommerce' ), $product_data->get_name() );
+					$message = sprintf( __( 'You cannot add another "%s" to your cart', 'woocommerce' ), $product_data->get_name() );
 
 					/**
-					 * Filters message about more than 1 product being added to cart.
+					 * Filters message about more than 1 product being added to cart
 					 *
 					 * @since 4.5.0
 					 * @param string     $message Message.
@@ -1214,7 +1214,7 @@ class WC_Cart extends WC_Legacy_Cart {
 				throw new Exception( $message );
 			}
 
-			// Stock check - this time accounting for whats already in-cart.
+			// Stock check - this time accounting for whats already in-cart
 			if ( $product_data->managing_stock() ) {
 				$products_qty_in_cart = $this->get_cart_item_quantities();
 
@@ -1229,11 +1229,11 @@ class WC_Cart extends WC_Legacy_Cart {
 						esc_attr( $wp_button_class ),
 						__( 'View cart', 'woocommerce' ),
 						/* translators: 1: quantity in stock 2: current quantity */
-						sprintf( __( 'You cannot add that amount to the cart &mdash; we have %1$s in stock and you already have %2$s in your cart.', 'woocommerce' ), wc_format_stock_quantity_for_display( $stock_quantity, $product_data ), wc_format_stock_quantity_for_display( $stock_quantity_in_cart, $product_data ) )
+						sprintf( __( 'You cannot add that amount to the cart &mdash; we have %1$s in stock and you already have %2$s in your cart', 'woocommerce' ), wc_format_stock_quantity_for_display( $stock_quantity, $product_data ), wc_format_stock_quantity_for_display( $stock_quantity_in_cart, $product_data ) )
 					);
 
 					/**
-					 * Filters message about product not having enough stock accounting for what's already in the cart.
+					 * Filters message about product not having enough stock accounting for what's already in the cart
 					 *
 					 * @param string $message Message.
 					 * @param WC_Product $product_data Product data.
@@ -1248,7 +1248,7 @@ class WC_Cart extends WC_Legacy_Cart {
 				}
 			}
 
-			// If cart_item_key is set, the item is already in the cart.
+			// If cart_item_key is set, the item is already in the cart
 			if ( $cart_item_key ) {
 				$new_quantity = $quantity + $this->cart_contents[ $cart_item_key ]['quantity'];
 				$this->set_quantity( $cart_item_key, $new_quantity, false );
@@ -1292,7 +1292,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	 * Remove a cart item.
 	 *
 	 * @since  2.3.0
-	 * @param  string $cart_item_key Cart item key to remove from the cart.
+	 * @param  string $cart_item_key Cart item key to remove from the cart
 	 * @return bool
 	 */
 	public function remove_cart_item( $cart_item_key ) {
@@ -1315,7 +1315,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	/**
 	 * Restore a cart item.
 	 *
-	 * @param  string $cart_item_key Cart item key to restore to the cart.
+	 * @param  string $cart_item_key Cart item key to restore to the cart
 	 * @return bool
 	 */
 	public function restore_cart_item( $cart_item_key ) {
@@ -1346,7 +1346,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	public function set_quantity( $cart_item_key, $quantity = 1, $refresh_totals = true ) {
 		if ( 0 === $quantity || $quantity < 0 ) {
 			wc_do_deprecated_action( 'woocommerce_before_cart_item_quantity_zero', array( $cart_item_key, $this ), '3.7.0', 'woocommerce_remove_cart_item' );
-			// If we're setting qty to 0 we're removing the item from the cart.
+			// If we're setting qty to 0 we're removing the item from the cart
 			return $this->remove_cart_item( $cart_item_key );
 		}
 
@@ -1384,7 +1384,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	}
 
 	/**
-	 * Calculate totals for the items in the cart.
+	 * Calculate totals for the items in the cart
 	 *
 	 * @uses WC_Cart_Totals
 	 */
@@ -1730,7 +1730,7 @@ class WC_Cart extends WC_Legacy_Cart {
 			return false;
 		}
 
-		// Check it can be used with cart.
+		// Check it can be used with cart
 		if ( ! $the_coupon->is_valid() ) {
 			wc_add_notice( $the_coupon->get_error_message(), 'error' );
 			return false;
@@ -1899,7 +1899,7 @@ class WC_Cart extends WC_Legacy_Cart {
 	}
 
 	/**
-	 * Add additional fee to the cart.
+	 * Add additional fee to the cart
 	 *
 	 * This method should be called on a callback attached to the
 	 * woocommerce_cart_calculate_fees action during cart/checkout. Fees do not

@@ -36,7 +36,7 @@ const cartItemsReducer = (
 };
 
 /**
- * Reducer for receiving items related to the cart.
+ * Reducer for receiving items related to the cart
  *
  * @param {CartState}  state  The current state in the store.
  * @param {CartAction} action Action object.

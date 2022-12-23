@@ -681,7 +681,7 @@ class WC_Form_Handler {
 					// is_sold_individually.
 					if ( $_product->is_sold_individually() && $quantity > 1 ) {
 						/* Translators: %s Product title. */
-						wc_add_notice( sprintf( __( 'You can only have 1 %s in your cart.', 'woocommerce' ), $_product->get_name() ), 'error' );
+						wc_add_notice( sprintf( __( 'You can only have 1 %s in your cart', 'woocommerce' ), $_product->get_name() ), 'error' );
 						$passed_validation = false;
 					}
 
@@ -811,10 +811,10 @@ class WC_Form_Handler {
 	}
 
 	/**
-	 * Handle adding simple products to the cart.
+	 * Handle adding simple products to the cart
 	 *
 	 * @since 2.4.6 Split from add_to_cart_action.
-	 * @param int $product_id Product ID to add to the cart.
+	 * @param int $product_id Product ID to add to the cart
 	 * @return bool success or not
 	 */
 	private static function add_to_cart_handler_simple( $product_id ) {
@@ -829,10 +829,10 @@ class WC_Form_Handler {
 	}
 
 	/**
-	 * Handle adding grouped products to the cart.
+	 * Handle adding grouped products to the cart
 	 *
 	 * @since 2.4.6 Split from add_to_cart_action.
-	 * @param int $product_id Product ID to add to the cart.
+	 * @param int $product_id Product ID to add to the cart
 	 * @return bool success or not
 	 */
 	private static function add_to_cart_handler_grouped( $product_id ) {
@@ -879,11 +879,11 @@ class WC_Form_Handler {
 	}
 
 	/**
-	 * Handle adding variable products to the cart.
+	 * Handle adding variable products to the cart
 	 *
 	 * @since 2.4.6 Split from add_to_cart_action.
 	 * @throws Exception If add to cart fails.
-	 * @param int $product_id Product ID to add to the cart.
+	 * @param int $product_id Product ID to add to the cart
 	 * @return bool success or not
 	 */
 	private static function add_to_cart_handler_variable( $product_id ) {
@@ -907,7 +907,7 @@ class WC_Form_Handler {
 			return false;
 		}
 
-		// Prevent parent variable product from being added to cart.
+		// Prevent parent variable product from being added to cart
 		if ( empty( $variation_id ) && $product && $product->is_type( 'variable' ) ) {
 			/* translators: 1: product link, 2: product name */
 			wc_add_notice( sprintf( __( 'Please choose product options by visiting <a href="%1$s" title="%2$s">%2$s</a>.', 'woocommerce' ), esc_url( get_permalink( $product_id ) ), esc_html( $product->get_name() ) ), 'error' );

@@ -43,7 +43,7 @@ export const receiveCart = (
 };
 
 /**
- * Returns an action object used in updating the store with the provided cart.
+ * Returns an action object used in updating the store with the provided cart
  *
  * This omits the customer addresses so that only updates to cart items and totals are received. This is useful when
  * currently editing address information to prevent it being overwritten from the server.
@@ -245,7 +245,7 @@ export function* applyExtensionCartUpdate(
  * Applies a coupon code and either invalidates caches, or receives an error if
  * the coupon cannot be applied.
  *
- * @param {string} couponCode The coupon code to apply to the cart.
+ * @param {string} couponCode The coupon code to apply to the cart
  * @throws            Will throw an error if there is an API problem.
  */
 export function* applyCoupon(
@@ -286,7 +286,7 @@ export function* applyCoupon(
  * Removes a coupon code and either invalidates caches, or receives an error if
  * the coupon cannot be removed.
  *
- * @param {string} couponCode The coupon code to remove from the cart.
+ * @param {string} couponCode The coupon code to remove from the cart
  * @throws            Will throw an error if there is an API problem.
  */
 export function* removeCoupon(
@@ -329,8 +329,8 @@ export function* removeCoupon(
  * - If successful, yields action to add item from store.
  * - If error, yields action to store error.
  *
- * @param {number} productId    Product ID to add to cart.
- * @param {number} [quantity=1] Number of product ID being added to cart.
+ * @param {number} productId    Product ID to add to cart
+ * @param {number} [quantity=1] Number of product ID being added to cart
  * @throws           Will throw an error if there is an API problem.
  */
 export function* addItemToCart(
@@ -505,7 +505,7 @@ export const setShippingAddress = (
 
 /**
  * Updates the shipping and/or billing address for the customer and returns an
- * updated cart.
+ * updated cart
  *
  * @param {BillingAddressShippingAddress} customerData Address data to be updated; can contain both
  *                                                     billing_address and shipping_address.

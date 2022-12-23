@@ -49,7 +49,7 @@ final class WC_Cart_Fees {
 	);
 
 	/**
-	 * Constructor. Reference to the cart.
+	 * Constructor. Reference to the cart
 	 *
 	 * @since 3.2.0
 	 * @throws Exception If missing WC_Cart object.

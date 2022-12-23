@@ -27,7 +27,7 @@ class CartFeeSchema extends AbstractSchema {
 	public function get_properties() {
 		return [
 			'id'     => [
-				'description' => __( 'Unique identifier for the fee within the cart.', 'woocommerce' ),
+				'description' => __( 'Unique identifier for the fee within the cart', 'woocommerce' ),
 				'type'        => 'string',
 				'context'     => [ 'view', 'edit' ],
 				'readonly'    => true,

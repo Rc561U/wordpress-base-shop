@@ -114,11 +114,11 @@
  * @typedef {Object} CartItem
  *
  * @property {string}              key                  Unique identifier for the
- *                                                      item within the cart.
+ *                                                      item within the cart
  * @property {number}              id                   The cart item product or
  *                                                      variation id.
  * @property {number}              quantity             The quantity of this item
- *                                                      in the cart.
+ *                                                      in the cart
  * @property {string}              name                 Product name.
  * @property {string}              summary              A short summary (or
  *                                                      excerpt from the full
@@ -159,14 +159,14 @@
 /**
  * @typedef {Object} CartData
  *
- * @property {Array}               coupons         Coupons applied to cart.
+ * @property {Array}               coupons         Coupons applied to cart
  * @property {Array}               shippingRates   Array of selected shipping
  *                                                 rates.
  * @property {CartShippingAddress} shippingAddress Shipping address for the
- *                                                 cart.
- * @property {Array}               items           Items in the cart.
- * @property {number}              itemsCount      Number of items in the cart.
- * @property {number}              itemsWeight     Weight of items in the cart.
+ *                                                 cart
+ * @property {Array}               items           Items in the cart
+ * @property {number}              itemsCount      Number of items in the cart
+ * @property {number}              itemsWeight     Weight of items in the cart
  * @property {boolean}             needsShipping   True if the cart needs
  *                                                 shipping.
  * @property {CartTotals}          totals          Cart total amounts.

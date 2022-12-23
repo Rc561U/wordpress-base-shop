@@ -121,7 +121,7 @@ jQuery( function( $ ) {
 	};
 
 	/**
-	 * Update fragments after remove from cart event in mini-cart.
+	 * Update fragments after remove from cart event in mini-cart
 	 */
 	AddToCartHandler.prototype.onRemoveFromCart = function( e ) {
 		var $thisbutton = $( this ),

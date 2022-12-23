@@ -132,7 +132,7 @@
  * @property {boolean}                      hasOrder                             True when the checkout has a draft
  *                                                                               order from the API.
  * @property {boolean}                      isCart                               When true, means the provider is
- *                                                                               providing data for the cart.
+ *                                                                               providing data for the cart
  * @property {number}                       customerId                           This is the ID of the customer the
  *                                                                               draft order belongs to.
  * @property {boolean}                      shouldCreateAccount                  Should a user account be created?
@@ -152,7 +152,7 @@
 /**
  * @typedef {Object} AddToCartFormContext
  *
- * @property {Object}                         product              The product object to add to the cart.
+ * @property {Object}                         product              The product object to add to the cart
  * @property {string}                         productType          The name of the product type.
  * @property {boolean}                        productIsPurchasable True if the product can be purchased.
  * @property {boolean}                        productHasOptions    True if the product has additional options and thus
@@ -160,9 +160,9 @@
  * @property {boolean}                        supportsFormElements True if the product type supports form elements.
  * @property {boolean}                        showFormElements     True if showing a full add to cart form (enabled and
  *                                                                 supported).
- * @property {number}                         quantity             Stores the quantity being added to the cart.
- * @property {number}                         minQuantity          Min quantity that can be added to the cart.
- * @property {number}                         maxQuantity          Max quantity than can be added to the cart.
+ * @property {number}                         quantity             Stores the quantity being added to the cart
+ * @property {number}                         minQuantity          Min quantity that can be added to the cart
+ * @property {number}                         maxQuantity          Max quantity than can be added to the cart
  * @property {Object}                         requestParams        List of params to send to the API.
  * @property {boolean}                        isIdle               True when the form state has changed and has no
  *                                                                 activity.

@@ -308,7 +308,7 @@ class WC_Meta_Box_Coupon_Data {
 							'id'                => 'limit_usage_to_x_items',
 							'label'             => __( 'Limit usage to X items', 'woocommerce' ),
 							'placeholder'       => esc_attr__( 'Apply to all qualifying items in cart', 'woocommerce' ),
-							'description'       => __( 'The maximum number of individual items this coupon can apply to when using product discounts. Leave blank to apply to all qualifying items in cart.', 'woocommerce' ),
+							'description'       => __( 'The maximum number of individual items this coupon can apply to when using product discounts. Leave blank to apply to all qualifying items in cart', 'woocommerce' ),
 							'desc_tip'          => true,
 							'class'             => 'short',
 							'type'              => 'number',

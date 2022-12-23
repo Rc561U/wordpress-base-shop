@@ -30,7 +30,7 @@ const settings = {
 	},
 	category: 'woocommerce',
 	keywords: [ __( 'WooCommerce', 'woocommerce' ) ],
-	description: __( 'Shopping cart.', 'woocommerce' ),
+	description: __( 'Shopping cart', 'woocommerce' ),
 	supports: {
 		align: [ 'wide' ],
 		html: false,

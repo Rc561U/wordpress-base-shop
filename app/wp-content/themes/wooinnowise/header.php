@@ -5,6 +5,8 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
     <?php wp_head(); ?>
 </head>
@@ -76,16 +78,7 @@
             </a>
         </div>
         <div class="col-lg-4 col-6 text-left">
-            <form action="">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search for products">
-                    <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary">
-                                <i class="fa fa-search"></i>
-                            </span>
-                    </div>
-                </div>
-            </form>
+            <?php aws_get_search_form( true ); ?>
         </div>
         <div class="col-lg-4 col-6 text-right">
             <p class="m-0">Customer Service</p>
@@ -116,26 +109,6 @@
                             'walker' => new Woostudy_Menu_Categories(),
                         )
                     ) ?>
-
-
-<!--                    <div class="nav-item dropdown dropright">-->
-<!--                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dresses <i-->
-<!--                                    class="fa fa-angle-right float-right mt-1"></i></a>-->
-<!--                        <div class="dropdown-menu position-absolute rounded-0 border-0 m-0">-->
-<!--                            <a href="" class="dropdown-item">Men's Dresses</a>-->
-<!--                            <a href="" class="dropdown-item">Women's Dresses</a>-->
-<!--                            <a href="" class="dropdown-item">Baby's Dresses</a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <a href="" class="nav-item nav-link">Shirts</a>-->
-<!--                    <a href="" class="nav-item nav-link">Jeans</a>-->
-<!--                    <a href="" class="nav-item nav-link">Swimwear</a>-->
-<!--                    <a href="" class="nav-item nav-link">Sleepwear</a>-->
-<!--                    <a href="" class="nav-item nav-link">Sportswear</a>-->
-<!--                    <a href="" class="nav-item nav-link">Jumpsuits</a>-->
-<!--                    <a href="" class="nav-item nav-link">Blazers</a>-->
-<!--                    <a href="" class="nav-item nav-link">Jackets</a>-->
-<!--                    <a href="" class="nav-item nav-link">Shoes</a>-->
                 </div>
             </nav>
         </div>
@@ -158,31 +131,40 @@
                                 'walker' => new Woostudy_Menu_Navbar(),
                             )
                         ) ?>
-<!--                        <a href="index.html" class="nav-item nav-link active">Home</a>-->
-<!--                        <a href="shop.html" class="nav-item nav-link">Shop</a>-->
-<!--                        <a href="detail.html" class="nav-item nav-link">Shop Detail</a>-->
-<!--                        <div class="nav-item dropdown">-->
-<!--                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages <i-->
-<!--                                        class="fa fa-angle-down mt-1"></i></a>-->
-<!--                            <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">-->
-<!--                                <a href="cart.html" class="dropdown-item">Shopping Cart</a>-->
-<!--                                <a href="checkout.html" class="dropdown-item">Checkout</a>-->
-<!--                            </div>-->
-<!--                        </div>-->
-<!--                        <a href="contact.html" class="nav-item nav-link">Contact</a>-->
                     </div>
+                    <!-- Button trigger modal -->
+
                     <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
-                        <a href="" class="btn px-0">
-                            <i class="fas fa-heart text-primary"></i>
-                            <span class="badge text-secondary border border-secondary rounded-circle"
-                                  style="padding-bottom: 2px;">0</span>
-                        </a>
-                        <a href="" class="btn px-0 ml-3">
+                        <a href="" class="btn px-0 ml-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
                             <i class="fas fa-shopping-cart text-primary"></i>
-                            <span class="badge text-secondary border border-secondary rounded-circle"
-                                  style="padding-bottom: 2px;">0</span>
+                            <span class="badge text-secondary border border-secondary rounded-circle ring-cart mini-cart-cnt"
+                                  style="padding-bottom: 2px;">
+<!--                                --><?php //echo WC()->cart->get_cart_contents_count()?>
+                                <?php echo count( WC()->cart->get_cart() ) ?>
+                            </span>
                         </a>
                     </div>
+
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <?php woocommerce_mini_cart(); ?>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </nav>
         </div>

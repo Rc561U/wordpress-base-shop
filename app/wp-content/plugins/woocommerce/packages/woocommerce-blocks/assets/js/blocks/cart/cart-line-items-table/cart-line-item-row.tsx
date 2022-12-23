@@ -323,9 +323,9 @@ const CartLineItemRow = forwardRef< HTMLTableRowElement, CartLineItemRowProps >(
 										);
 										speak(
 											sprintf(
-												/* translators: %s refers to the item name in the cart. */
+												/* translators: %s refers to the item name in the cart */
 												__(
-													'%s has been removed from your cart.',
+													'%s has been removed from your cart',
 													'woo-gutenberg-products-block'
 												),
 												name

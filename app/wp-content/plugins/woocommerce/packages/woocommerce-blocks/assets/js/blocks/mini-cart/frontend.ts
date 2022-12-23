@@ -140,7 +140,7 @@ window.addEventListener( 'load', () => {
 		miniCartButton.addEventListener( 'click', openDrawer );
 
 		// There might be more than one Mini Cart block in the page. Make sure
-		// only one opens when adding a product to the cart.
+		// only one opens when adding a product to the cart
 		if ( i === 0 ) {
 			document.body.addEventListener(
 				'wc-blocks_added_to_cart',

@@ -1532,7 +1532,7 @@ function woocommerce_register_shipping_method( $shipping_method ) {
 
 if ( ! function_exists( 'wc_get_shipping_zone' ) ) {
 	/**
-	 * Get the shipping zone matching a given package from the cart.
+	 * Get the shipping zone matching a given package from the cart
 	 *
 	 * @since  2.6.0
 	 * @uses   WC_Shipping_Zones::get_zone_matching_package

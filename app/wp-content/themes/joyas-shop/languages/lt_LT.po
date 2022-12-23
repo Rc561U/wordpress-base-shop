@@ -63,7 +63,7 @@ msgstr "Meta"
 msgid "Archives"
 msgstr "Archyvai"
 
-#. translators: number of items in the mini cart.
+#. translators: number of items in the mini cart
 #: inc/woocommerce.php:236
 msgid "%d item"
 msgid_plural "%d items"

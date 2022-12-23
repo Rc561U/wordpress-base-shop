@@ -463,7 +463,7 @@ class WC_REST_Coupons_V1_Controller extends WC_REST_Posts_Controller {
 					'readonly'    => true,
 				),
 				'individual_use' => array(
-					'description' => __( 'If true, the coupon can only be used individually. Other applied coupons will be removed from the cart.', 'woocommerce' ),
+					'description' => __( 'If true, the coupon can only be used individually. Other applied coupons will be removed from the cart', 'woocommerce' ),
 					'type'        => 'boolean',
 					'default'     => false,
 					'context'     => array( 'view', 'edit' ),

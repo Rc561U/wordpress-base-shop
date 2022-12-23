@@ -16,7 +16,7 @@ defined( 'ABSPATH' ) || exit;
 class WC_Shortcode_Cart {
 
 	/**
-	 * Calculate shipping for the cart.
+	 * Calculate shipping for the cart
 	 *
 	 * @throws Exception When some data is invalid.
 	 */

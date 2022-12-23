@@ -22,9 +22,9 @@ describe( 'Notice utils', () => {
 						id: 'coupon-form',
 						status: 'error',
 						content:
-							'Coupon cannot be removed because it is not already applied to the cart.',
+							'Coupon cannot be removed because it is not already applied to the cart',
 						spokenMessage:
-							'Coupon cannot be removed because it is not already applied to the cart.',
+							'Coupon cannot be removed because it is not already applied to the cart',
 						isDismissible: true,
 						actions: [],
 						type: 'default',
@@ -58,9 +58,9 @@ describe( 'Notice utils', () => {
 						id: 'coupon-form',
 						status: 'error',
 						content:
-							'Coupon cannot be removed because it is not already applied to the cart.',
+							'Coupon cannot be removed because it is not already applied to the cart',
 						spokenMessage:
-							'Coupon cannot be removed because it is not already applied to the cart.',
+							'Coupon cannot be removed because it is not already applied to the cart',
 						isDismissible: true,
 						actions: [],
 						type: 'default',

@@ -20,7 +20,7 @@ const Block = ( { className }: MiniCartTitleBlockProps ): JSX.Element => {
 			{ cartIsLoading
 				? __( 'Your cart', 'woo-gutenberg-products-block' )
 				: sprintf(
-						/* translators: %d is the count of items in the cart. */
+						/* translators: %d is the count of items in the cart */
 						_n(
 							'Your cart (%d item)',
 							'Your cart (%d items)',
