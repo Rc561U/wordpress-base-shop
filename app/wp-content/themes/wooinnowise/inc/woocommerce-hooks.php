@@ -44,3 +44,20 @@ add_filter( 'woocommerce_breadcrumb_defaults', function() {
 } );
 
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_output_all_notices', 10 );
+
+add_action( 'template_redirect', function () {
+    if ( is_product() ) {
+        remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+    }
+} );
+
+remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
+
+
+// Remove sale flash from gallery
+remove_action( 'woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
+
+// remove related products from product page
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+// remove upsell from product page
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );

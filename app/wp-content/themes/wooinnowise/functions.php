@@ -5,6 +5,9 @@ function woostudy_setup()
     add_theme_support('title-tag');
     add_theme_support('post-thumbnail');
     add_theme_support('woocommerce');
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
     register_nav_menus(
         array(
             'menu-1' => __('Top Menu', 'woostudy'),
