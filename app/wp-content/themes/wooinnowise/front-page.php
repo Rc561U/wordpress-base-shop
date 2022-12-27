@@ -1,14 +1,16 @@
-<?php get_header()?>
+<?php get_header() ?>
 
 <!-- Carousel Start -->
 <div class="container-fluid mb-3">
     <div class="row px-xl-5">
-        <?php
-        global $post;
-        $slider = get_posts( array(
-            'post_type' => 'slider',
-        ) );
-        ?>
+
+		<?php
+		global $post;
+		$slider = get_posts( array(
+			'post_type' => 'slider',
+		) );
+		?>
+
         <div class="col-lg-8">
             <?php if ( $slider ): ?>
                 <div id="header-carousel" class="carousel slide carousel-fade mb-30 mb-lg-0" data-ride="carousel">
@@ -32,7 +34,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <?php $i++; endforeach; ?>
+                        <?php $i++; endforeach; ?>
                     </div>
                 </div>
             <?php else: ?>
@@ -95,40 +97,23 @@
 </div>
 <!-- Featured End -->
 
-
-<!-- Categories Start -->
-
 <!-- Categories Start -->
 <div class="container-fluid pt-5">
     <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span
                 class="bg-secondary pr-3"><?php _e( 'Categories', 'woostudy' ) ?></span></h2>
-    <div class="row-flex px-xl-5 pb-3">
-        <?php echo do_shortcode( '[product_categories]' ) ?>
-        <!--<div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-            <a class="text-decoration-none" href="">
-                <div class="cat-item d-flex align-items-center mb-4">
-                    <div class="overflow-hidden" style="width: 100px; height: 100px;">
-                        <img class="img-fluid" src="<?php /*echo get_template_directory_uri(); */?>/assets/img/cat-1.jpg"
-                             alt="">
-                    </div>
-                    <div class="flex-fill pl-3">
-                        <h6>Category Name</h6>
-                        <small class="text-body">100 Products</small>
-                    </div>
-                </div>
-            </a>
-        </div>-->
+    <div class="row px-xl-5 pb-3 product-cats">
+		<?php echo do_shortcode( '[product_categories hide_empty="0"]' ) ?>
     </div>
 </div>
 <!-- Categories End -->
 
-
-
 <!-- Products Start -->
 <div class="container-fluid pt-5 pb-3">
-    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3"><?php _e('Feature Products','woostudy');?></span></h2>
+    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span
+                class="bg-secondary pr-3"><?php _e( 'Featured Products', 'woostudy' ) ?></span>
+    </h2>
     <div class="row px-xl-5">
-        <?php echo do_shortcode( '[featured_products limit=8]' ) ?>
+		<?php echo do_shortcode( '[featured_products limit="8"]' ) ?>
     </div>
 </div>
 <!-- Products End -->
@@ -164,9 +149,11 @@
 
 <!-- Products Start -->
 <div class="container-fluid pt-5 pb-3">
-    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Recent Products</span></h2>
+    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span
+                class="bg-secondary pr-3"><?php echo __( 'Recent Products', 'woostudy' ) ?></span>
+    </h2>
     <div class="row px-xl-5">
-        <?php echo do_shortcode( '[recent_products limit=8]' ) ?>
+		<?php echo do_shortcode( '[recent_products limit="8"]' ) ?>
     </div>
 </div>
 <!-- Products End -->
@@ -206,7 +193,6 @@
     </div>
 </div>
 <!-- Vendor End -->
-<!-- Back to Top -->
-<a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
 
 <?php get_footer() ?>

@@ -11,12 +11,20 @@
  */
 
 defined( 'ABSPATH' ) || exit;
-
+// https://usersinsights.com/woocommerce-get-product-variations-programmatically/
 ?>
 <script type="text/template" id="tmpl-variation-template">
 	<div class="woocommerce-variation-description">{{{ data.variation.variation_description }}}</div>
 	<div class="woocommerce-variation-price">{{{ data.variation.price_html }}}</div>
 	<div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
+    <div class="test">
+<!--        {{{ data.variation.image.url }}}-->
+        <?php
+        /** @var WC_Product_Variable $product */
+//        global $product;
+//        woostudy_debug( $product->get_available_variations() );
+        ?>
+    </div>
 </script>
 <script type="text/template" id="tmpl-unavailable-variation-template">
 	<p><?php esc_html_e( 'Sorry, this product is unavailable. Please choose a different combination.', 'woocommerce' ); ?></p>

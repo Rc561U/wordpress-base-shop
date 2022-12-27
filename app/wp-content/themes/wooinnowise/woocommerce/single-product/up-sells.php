@@ -55,7 +55,6 @@ if ( $upsells ) : ?>
         </div>
 
 
-
     </div>
 
 <?php

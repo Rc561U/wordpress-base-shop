@@ -43,13 +43,6 @@
                             </div>
                         </div>
                     </form>
-                    <h6 class="text-secondary text-uppercase mt-4 mb-3">Follow Us</h6>
-                    <div class="d-flex">
-                        <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -68,6 +61,13 @@
     </div>
 </div>
 <!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
 <?php wp_footer(); ?>
+
 </body>
+
 </html>

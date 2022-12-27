@@ -112,19 +112,18 @@ class Woostudy_Menu_Navbar extends Walker_Nav_Menu {
 		$atts['href']         = ! empty( $menu_item->url ) ? $menu_item->url : '';
 		$atts['aria-current'] = $menu_item->current ? 'page' : '';
 
-//        woostudy_debug($menu_item);
-        $active_class = $menu_item->current ? ' active' : '';
-        $active_parent_class = $menu_item->current_item_parent ? ' active' : '';
+		$active_class = $menu_item->current ? ' active' : '';
+		$active_parent_class = $menu_item->current_item_parent ? ' active' : '';
 
 		if ( $this->has_children ) {
 //			$atts['href'] = '#';
-			$atts['class'] = 'nav-link dropdown-toggle' . $active_class .$active_parent_class;
+			$atts['class'] = 'nav-link dropdown-toggle' . $active_class . $active_parent_class;
 			$atts['data-toggle'] = 'dropdown';
 		} else {
 			if ( $depth > 0 ) {
-				$atts['class'] = 'dropdown-item'. $active_class . $active_parent_class;
+				$atts['class'] = 'dropdown-item' . $active_class . $active_parent_class;
 			} else {
-				$atts['class'] = 'nav-item nav-link'. $active_class . $active_parent_class;
+				$atts['class'] = 'nav-item nav-link' . $active_class . $active_parent_class;
 			}
 		}
 

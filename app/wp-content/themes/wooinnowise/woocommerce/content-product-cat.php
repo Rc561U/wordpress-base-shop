@@ -16,21 +16,21 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 ?>
 <div <?php wc_product_cat_class( 'col-lg-3 col-md-4 col-sm-6 pb-1 category-list', $category ); ?>>
-    <?php
-    /**
-     * The woocommerce_before_subcategory hook.
-     *
-     * @hooked woocommerce_template_loop_category_link_open - 10
-     */
-    do_action( 'woocommerce_before_subcategory', $category );
-    ?>
+	<?php
+	/**
+	 * The woocommerce_before_subcategory hook.
+	 *
+	 * @hooked woocommerce_template_loop_category_link_open - 10
+	 */
+	do_action( 'woocommerce_before_subcategory', $category );
+	?>
 
     <div class="cat-item d-flex align-items-center mb-4">
-        <div class="overflow-hidden" style="width: 125px; height: 125px;">
+        <div class="overflow-hidden" style="width: 100px; height: 100px;">
             <?php
             /**
              * The woocommerce_before_subcategory_title hook.
@@ -51,21 +51,22 @@ if ( ! defined( 'ABSPATH' ) ) {
             do_action( 'woocommerce_shop_loop_subcategory_title', $category );
             ?>
         </div><!-- ./flex-fill pl-3 -->
+
         <?php
-        /**
-         * The woocommerce_after_subcategory_title hook.
-         */
-        do_action( 'woocommerce_after_subcategory_title', $category );
-        ?>
+		/**
+		 * The woocommerce_after_subcategory_title hook.
+		 */
+		do_action( 'woocommerce_after_subcategory_title', $category );
+		?>
 
     </div><!-- ./cat-item d-flex align-items-center mb-4 -->
 
-    <?php
-    /**
-     * The woocommerce_after_subcategory hook.
-     *
-     * @hooked woocommerce_template_loop_category_link_close - 10
-     */
-    do_action( 'woocommerce_after_subcategory', $category );
-    ?>
+	<?php
+	/**
+	 * The woocommerce_after_subcategory hook.
+	 *
+	 * @hooked woocommerce_template_loop_category_link_close - 10
+	 */
+	do_action( 'woocommerce_after_subcategory', $category );
+	?>
 </div>

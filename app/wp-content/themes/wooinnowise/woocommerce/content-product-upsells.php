@@ -26,7 +26,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 ?>
 <div <?php wc_product_class( '', $product ); ?>>
     <div class="product-item bg-light mb-4">
-
 		<?php
 		/**
 		 * Hook: woocommerce_before_shop_loop_item.

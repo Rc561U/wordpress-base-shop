@@ -23,63 +23,66 @@ global $product;
 if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
+
+// https://woocommerce.com/document/conditional-tags/
+
 $product_class = ( is_front_page() || is_product() ) ? 'col-lg-3 col-md-4 col-sm-6 pb-1' : 'col-lg-4 col-md-6 col-sm-6 pb-1';
 ?>
 <div <?php wc_product_class( $product_class, $product ); ?>>
     <div class="product-item bg-light mb-4">
-        <?php
-
-        /**
-         * Hook: woocommerce_before_shop_loop_item.
-         *
-         * @hooked woocommerce_template_loop_product_link_open - 10
-         */
-        do_action( 'woocommerce_before_shop_loop_item' );
-        ?>
+		<?php
+		/**
+		 * Hook: woocommerce_before_shop_loop_item.
+		 *
+		 * @hooked woocommerce_template_loop_product_link_open - 10
+		 */
+		do_action( 'woocommerce_before_shop_loop_item' );
+		?>
 
         <div class="product-img position-relative overflow-hidden">
-            <?php
+			<?php
+			/**
+			 * Hook: woocommerce_before_shop_loop_item_title.
+			 *
+			 * @hooked woocommerce_show_product_loop_sale_flash - 10
+			 * @hooked woocommerce_template_loop_product_thumbnail - 10
+			 */
+			do_action( 'woocommerce_before_shop_loop_item_title' );
+			?>
+        </div><!-- ./product-img position-relative overflow-hidden -->
 
-                /**
-                 * Hook: woocommerce_before_shop_loop_item_title.
-                 *
-                 * @hooked woocommerce_show_product_loop_sale_flash - 10
-                 * @hooked woocommerce_template_loop_product_thumbnail - 10
-                 */
-                do_action( 'woocommerce_before_shop_loop_item_title' );
-            ?>
-        </div>
         <div class="text-center py-4">
-        <?php
-        /**
-         * Hook: woocommerce_shop_loop_item_title.
-         *
-         * @hooked woocommerce_template_loop_product_title - 10
-         */
-        do_action( 'woocommerce_shop_loop_item_title' );
-        echo '<div class="woostudy-rating">';
-        woocommerce_template_loop_rating();
-        if ( $rating_cnt = $product->get_rating_count() ) {
-            echo '<span class="woostudy-rating-count"> <small>(' . $rating_cnt . ')</small> </span>';
-        }
-        echo '</div>';
+			<?php
+			/**
+			 * Hook: woocommerce_shop_loop_item_title.
+			 *
+			 * @hooked woocommerce_template_loop_product_title - 10
+			 */
+			do_action( 'woocommerce_shop_loop_item_title' );
 
-        /**
-         * Hook: woocommerce_after_shop_loop_item_title.
-         *
-         * @hooked woocommerce_template_loop_rating - 5
-         * @hooked woocommerce_template_loop_price - 10
-         */
-        do_action( 'woocommerce_after_shop_loop_item_title' );
+			echo '<div class="woostudy-rating">';
+                woocommerce_template_loop_rating();
+                if ( $rating_cnt = $product->get_rating_count() ) {
+                    echo '<span class="woostudy-rating-count"> <small>(' . $rating_cnt . ')</small> </span>';
+                }
+			echo '</div>';
 
-        /**
-         * Hook: woocommerce_after_shop_loop_item.
-         *
-         * @hooked woocommerce_template_loop_product_link_close - 5
-         * @hooked woocommerce_template_loop_add_to_cart - 10
-         */
-        do_action( 'woocommerce_after_shop_loop_item' );
-        ?>
-        </div>
-    </div>
-</div>
+			/**
+			 * Hook: woocommerce_after_shop_loop_item_title.
+			 *
+			 * @hooked woocommerce_template_loop_rating - 5
+			 * @hooked woocommerce_template_loop_price - 10
+			 */
+			do_action( 'woocommerce_after_shop_loop_item_title' );
+
+			/**
+			 * Hook: woocommerce_after_shop_loop_item.
+			 *
+			 * @hooked woocommerce_template_loop_product_link_close - 5
+			 * @hooked woocommerce_template_loop_add_to_cart - 10
+			 */
+			do_action( 'woocommerce_after_shop_loop_item' );
+			?>
+        </div><!-- ./text-center py-4 -->
+    </div><!-- ./product-item bg-light mb-4 -->
+</div><!-- ./col-lg-3 col-md-4 col-sm-6 pb-1 -->
