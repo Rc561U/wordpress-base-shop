@@ -58,6 +58,9 @@ require_once get_template_directory() . '/inc/class-woostudy-menu-categories.php
 require_once get_template_directory() . '/inc/class-woostudy-menu-navbar.php';
 require_once get_template_directory() . '/inc/cpt.php';
 
-function woostudy_debug( $data ) {
+function woostudy_debug( $data, $die = false ) {
 	echo '<pre>' . print_r( $data, 1 ) . '</pre>';
+	if ( $die ) {
+		die;
+	}
 }

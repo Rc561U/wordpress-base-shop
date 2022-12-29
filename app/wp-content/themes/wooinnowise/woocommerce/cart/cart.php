@@ -39,7 +39,7 @@ defined( 'ABSPATH' ) || exit;
 
             <form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 				<?php do_action( 'woocommerce_before_cart_table' ); ?>
-                <table class="table table-light table-borderless table-hover text-center mb-0 shop_table shop_table_responsive cart woocommerce-cart-form__contents">
+                <table class="table table-light table-borderless table-hover mb-0 shop_table shop_table_responsive cart woocommerce-cart-form__contents">
                     <thead class="thead-dark">
                     <tr>
                         <th><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>

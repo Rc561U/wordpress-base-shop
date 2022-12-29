@@ -56,9 +56,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	        <?php if ( $checkout->get_checkout_fields() ) : ?>
                 <div class="col-lg-8">
-
 	                <?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
+                    <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3"><?php _e( 'Billing Address', 'woostudy' ); ?></span></h5>
                     <div class="bg-light p-30">
 
                         <?php do_action( 'woocommerce_checkout_billing' ); ?>
@@ -67,14 +67,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     </div>
 
+	                <?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
                 </div><!-- ./col-lg-8 -->
             <?php endif; ?>
 
             <div class="col-lg-4">
-                2
+	            <?php do_action( 'woocommerce_checkout_before_order_review_heading' ); ?>
+
+                <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3"><?php _e( 'Order total', 'woostudy' ); ?></span></h5>
+                <div class="bg-light p-30">
+
+	                <?php do_action( 'woocommerce_checkout_order_review' ); ?>
+
+                </div>
+
+	            <?php do_action( 'woocommerce_checkout_after_order_review' ); ?>
             </div><!-- ./col-lg-4 -->
 
         </div><!-- ./row px-xl-5 -->
     </form>
+	<?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
 </div><!-- ./container-fluid -->
 <!-- Checkout End -->
