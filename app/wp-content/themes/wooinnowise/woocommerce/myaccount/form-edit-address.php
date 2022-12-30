@@ -25,21 +25,23 @@ do_action('woocommerce_before_edit_account_address_form'); ?>
     <?php wc_get_template('myaccount/my-address.php'); ?>
 <?php else : ?>
 
-    <form method="post">
+    <form method="post" class="">
 
         <h3><?php echo apply_filters('woocommerce_my_account_edit_address_title', $page_title, $load_address); ?></h3><?php // @codingStandardsIgnoreLine ?>
 
         <div class="woocommerce-address-fields form-group">
             <?php do_action("woocommerce_before_edit_address_form_{$load_address}"); ?>
 
-            <div class="woocommerce-address-fields__field-wrapper">
+            <div class="woocommerce-address-fields__field-wrapper p-1">
                 <?php
+
                 foreach ($address as $key => $field) {
-                    print_r( $field);
                     woocommerce_form_field($key, [
                         'type' => 'text',
-                        'label' => $field['label'],
+                        'autocomplete'      => $field['autocomplete'],
+                        'required' => true,
                         'class' => ['form-group'],
+                        'label' => $field['label'],
                         'input_class' => ['form-control'],
 
                     ], wc_get_post_data_by_key($key, $field['value']));

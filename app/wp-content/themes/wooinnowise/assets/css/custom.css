@@ -161,7 +161,10 @@ span.price del {
 /* Star rating */
 
 .mini-cart-cnt {
-    padding-bottom: 2px;
+    padding: 5px 6px;
+    color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    border-width: 2px !important;
 }
 
 .aws-container .aws-search-form {
@@ -535,4 +538,8 @@ legend {
     display: block;
     width: auto;
     padding: 0 5px;
+}
+
+.woocommerce-address-fields__field-wrapper p{
+    display: block;
 }

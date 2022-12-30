@@ -12,27 +12,6 @@
 
 <!-- Topbar Start -->
 <div class="container-fluid">
-    <div class="row bg-secondary py-1 px-xl-5">
-        <div class="col-lg-6 d-none d-lg-block">
-			<?php wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'container'      => false,
-					'menu_class'     => 'd-inline-flex align-items-center h-100 menu-1',
-				)
-			) ?>
-        </div>
-        <div class="col-lg-6 text-center text-lg-right">
-            <div class="d-inline-flex align-items-center">
-                <a href="<?php echo wc_get_cart_url() ?>" class="btn px-0 ml-2">
-                    <i class="fas fa-shopping-cart text-dark"></i>
-                    <span class="badge text-dark border border-dark rounded-circle mini-cart-cnt">
-                        <?php echo count( WC()->cart->get_cart() ) ?>
-                    </span>
-                </a>
-            </div>
-        </div>
-    </div>
     <div class="row align-items-center bg-light py-3 px-xl-5 d-none d-lg-flex">
         <div class="col-lg-4">
             <a href="<?php echo home_url( '/' ) ?>" class="text-decoration-none">
@@ -45,7 +24,7 @@
         </div>
         <div class="col-lg-4 col-6 text-right">
             <p class="m-0">Customer Service</p>
-            <h5 class="m-0">+012 345 6789</h5>
+            <h5 class="m-0">+375 25 937-99-21</h5>
         </div>
     </div>
 </div>
@@ -58,7 +37,7 @@
         <div class="col-lg-3 d-none d-lg-block">
             <a class="btn d-flex align-items-center justify-content-between bg-primary w-100" data-toggle="collapse"
                href="#navbar-vertical" style="height: 65px; padding: 0 30px;">
-                <h6 class="text-dark m-0"><i class="fa fa-bars mr-2"></i>Categories</h6>
+                <h6 class="text-dark m-0"><i class="fa fa-bars mr-2"></i>CATALOG</h6>
                 <i class="fa fa-angle-down text-dark"></i>
             </a>
             <nav class="collapse position-absolute navbar navbar-vertical navbar-light align-items-start p-0 bg-light"
@@ -96,7 +75,20 @@
 	                    ) ?>
                     </div>
                 </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center ">
+                        <a href="<?php echo wc_get_cart_url() ?>" class="btn px-0 ml-2 ">
+                            <i class="fas fa-shopping-cart text-warning"></i>
+<!--                            <span class="border-warning text-warning rounded-circle mini-cart-cnt">-->
+<!--                            <span class="badge text-dark border border-dark rounded-circle mini-cart-cnt">-->
+                            <span class="badge rounded-circle border text-warning mini-cart-cnt">
+                        <?php echo count( WC()->cart->get_cart() ) ?>
+                    </span>
+                        </a>
+                    </div>
+                </div>
             </nav>
+
         </div>
     </div>
 </div>
