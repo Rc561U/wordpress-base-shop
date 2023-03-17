@@ -1,2 +1,4 @@
-### Trainee WORDPRESS-WOOCOMMERCE project
+# Trainee WORDPRESS-WOOCOMMERCE project
 
+## Technologie used 
+## Test commit from dev branch
